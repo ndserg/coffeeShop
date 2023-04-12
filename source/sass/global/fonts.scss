@@ -1,0 +1,43 @@
+/* Gilroy-500 */
+@font-face {
+  font-display: swap;
+
+  font-weight: 500;
+  font-family: "Gilroy";
+  font-style: normal;
+  src: url("/fonts/Gilroy-Medium.woff2") format("woff2"),
+    url("/fonts/Gilroy-Medium.woff") format("woff");
+}
+
+/* Gilroy-600 */
+@font-face {
+  font-display: swap;
+
+  font-weight: 600;
+  font-family: "Gilroy";
+  font-style: normal;
+  src: url("/fonts/Gilroy-Semibold.woff2") format("woff2"),
+    url("/fonts/Gilroy-Semibold.woff") format("woff");
+}
+
+/* Gilroy-700 */
+@font-face {
+  font-display: swap;
+
+  font-weight: 700;
+  font-family: "Gilroy";
+  font-style: normal;
+  src: url("/fonts/Gilroy-Bold.woff2") format("woff2"),
+    url("/fonts/Gilroy-Bold.woff") format("woff");
+}
+
+/* Gilroy-900 */
+@font-face {
+  font-display: swap;
+
+  font-weight: 900;
+  font-family: "Gilroy";
+  font-style: normal;
+  src: url("/fonts/Gilroy-Black.woff2") format("woff2"),
+    url("/fonts/Gilroy-Black.woff") format("woff");
+}

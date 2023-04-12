@@ -1,0 +1,43 @@
+.page-main {
+  background: url(/img/bg/spot-1.svg),
+  url(/img/bg/spot-2.svg);
+background-repeat: no-repeat,
+  no-repeat;
+background-position: calc(50% + 282px) 20px,
+  calc(50% - 300px) 984px;
+background-size: 478px 578px,
+  440px 498px;
+
+  @media (min-width: $tablet-width) {
+  background: url(/img/bg/spot-1.svg),
+    url(/img/bg/spot-2.svg);
+  background-repeat: no-repeat,
+    no-repeat;
+  background-position: calc(50% + 406px) 38px,
+    calc(50% - 625px) 1529px;
+  background-size: 766px 932px,
+    900px 1019px;
+  }
+
+  @media (min-width: $laptop-width) {
+    background: url(/img/bg/spot-1.svg),
+      url(/img/bg/spot-2.svg);
+    background-repeat: no-repeat,
+      no-repeat;
+    background-position: calc(50% + 672px) -200px,
+      calc(50% - 780px) 700px;
+    background-size: 1014px 1240px,
+      825px 936px;
+    }
+
+  @media (min-width: $desktop-width) {
+    background: url(/img/bg/spot-1.svg),
+      url(/img/bg/spot-2.svg);
+    background-repeat: no-repeat,
+      no-repeat;
+    background-position: calc(50% + 968px) -276px,
+      calc(50% - 1118px) 1006px;
+    background-size: 1456px 1756px,
+      1238px 1376px;
+    }
+}

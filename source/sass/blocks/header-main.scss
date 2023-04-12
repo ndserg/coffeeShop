@@ -1,0 +1,125 @@
+.header-main {
+  background-color: $white;
+
+  box-shadow: 0px 4px 14px rgba($c-9d, 25%);
+
+  @media (min-width: $laptop-width) {
+    background-color: transparent;
+
+    box-shadow: none;
+  }
+
+  &--active {
+    background-color: $white;
+
+    box-shadow: 0px 4px 14px rgba($c-9d, 25%);
+  }
+}
+
+.header-main__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: $mobile-width;
+  height: 70px;
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    justify-content: center;
+    max-width: $tablet-width;
+    height: 143px;
+  }
+
+  @media (min-width: $laptop-width) {
+    max-width: $laptop-width;
+    height: 113px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: $desktop-width;
+    height: 160px;
+  }
+}
+
+.header-main__menu-button {
+  display: block;
+  margin-right: 21px;
+
+  @media (min-width: $tablet-width) {
+    margin-right: 89px;
+  }
+
+  @media (min-width: $laptop-width) {
+    display: none;
+  }
+}
+
+.header-main__logo {
+  margin-right: auto;
+}
+
+.header-main__nav {
+  display: none;
+
+  @media (min-width: $laptop-width) {
+    display: block;
+  }
+}
+
+.header-main__user-menu {
+  margin-left: auto;
+}
+
+.header-main__contacts {
+  display: none;
+
+  @media (min-width: $laptop-width) {
+    display: none;
+  }
+}
+
+.header-main--open {
+  min-height: 100vh;
+
+  .header-main__wrapper {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    height: auto;
+    padding-bottom: 50px;
+  }
+
+  .header-main__menu-button {
+    margin-right: 0;
+  }
+
+  .header-main__logo {
+    order: -1;
+  }
+
+  .header-main__nav {
+    display: block;
+    width: 100%;
+    margin-top: 60px;
+    margin-bottom: 25px;
+
+    @media (min-width: $tablet-width) {
+      margin-top: 155px;
+      margin-bottom: 65px;
+    }
+  }
+
+  .header-main__user-menu {
+    width: 100%;
+    margin-bottom: 170px;
+    margin-left: 0;
+  }
+
+  .user-menu__search {
+    display: none;
+  }
+
+  .header-main__contacts {
+    display: block;
+    margin: 0 auto;
+  }
+}

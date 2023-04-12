@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Интернет магазин Кофе Milor</title>
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body class="page-main">
+  <header class="header-main">
+    <div class="container header-main__wrapper">
+      <button class="header-main__menu-button burger-button"></button>
+
+      <a class="header-main__logo logo" href="index.html">
+        <img class="logo__img" src="img/logo.svg" width="179" height="80" alt="Логотип магазина кофе Milor">
+      </a>
+
+      <nav class="header-main__nav sait-nav">
+        <ul class="sait-nav__list">
+          <li class="sait-nav__item">
+            <a class="sait-nav__link" href="#">Каталог товаров</a>
+          </li>
+
+          <li class="sait-nav__item">
+            <a class="sait-nav__link" href="#">Блог</a>
+          </li>
+
+          <li class="sait-nav__item">
+            <a class="sait-nav__link" href="#">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+
+      <ul class="header-main__user-menu user-menu">
+        <li class="user-menu__item user-menu__search">
+          <label class="user-menu__search-label" for="search" aria-label="Поиск">
+            <svg class="user-menu__icon" width="17" height="17">
+              <use xlink:href="icons/sprite.svg#icon-search"></use>
+            </svg>
+          </label>
+          <div class="user-menu__search-box search-box">
+            <div class="search-box_wrapper">
+              <button class="search-box__button-close" type="button">Отменить</button>
+
+              <input class="search-box__input" type="text" name="search" id="search" placeholder="Поиск по товарам">
+
+              <svg class="search-box__icon" width="32" height="31">
+                <use xlink:href="icons/sprite.svg#icon-search"></use>
+              </svg>
+
+              <ul class="search-box__list">
+                <li class="search-box__item search-box__item--not-found">
+                  Ничего не найдено
+                </li>
+
+                <li class="search-box__item">
+                  <a class="search-box__link" href="#">Ячменный напиток Millor - Здоровое питание</a>
+                </li>
+
+                <li class="search-box__item">
+                  <a class="search-box__link" href="#">Ячменный напиток Millor - Здоровое питание</a>
+                </li>
+
+                <li class="search-box__item">
+                  <a class="search-box__link" href="#">Ячменный напиток Millor - Здоровое питание</a>
+                </li>
+
+                <li class="search-box__item">
+                  <a class="search-box__link" href="#">Ячменный напиток Millor - Здоровое питание</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </li>
+
+        <li class="user-menu__item">
+          <a class="user-menu__link" href="#" aria-label="Корзина">
+            <svg class="user-menu__icon" width="19" height="17">
+              <use xlink:href="icons/sprite.svg#icon-cart-empty"></use>
+            </svg>
+          </a>
+        </li>
+
+        <li class="user-menu__item">
+          <a class="user-menu__link" href="#" aria-label="Логин">
+            <svg class="user-menu__icon user-menu__icon--login" width="17" height="20">
+              <use xlink:href="icons/sprite.svg#icon-login"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+
+      <div class="header-main__contacts header-contacts">
+        <a class="header-contacts__text-link" href="mailto:Import@kldrefine.com">Import@kldrefine.com</a>
+
+        <a class="header-contacts__icon-link" href="tel:+79123456142">
+          <span>Телефон</span>
+          <svg class="header-contacts__icon" width="50" height="50">
+            <use xlink:href="icons/sprite.svg#icon-phone"></use>
+          </svg>
+        </a>
+
+        <a class="header-contacts__icon-link" href="#">
+          <span>Instagram</span>
+          <svg class="header-contacts__icon" width="50" height="50">
+            <use xlink:href="icons/sprite.svg#icon-instagram"></use>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </header>
+</body>
+</html>

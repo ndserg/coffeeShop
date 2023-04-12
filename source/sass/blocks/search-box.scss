@@ -1,0 +1,254 @@
+.search-box {
+  width: 100%;
+  min-height: 100vh;
+
+  background-color: $white;
+
+  @media (min-width: $laptop-width) {
+    width: 880px;
+    min-height: auto;
+
+    border-radius: 30px;
+    box-shadow: 0px 0px 20px rgba($c-9d, 25%);
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1240px;
+  }
+}
+
+.search-box_wrapper {
+  position: relative;
+
+  width: $mobile-width;
+  margin: 0 auto;
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  @media (min-width: $tablet-width) {
+    width: $tablet-width;
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  @media (min-width: $laptop-width) {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.search-box__button-close {
+  position: absolute;
+  top: 40px;
+  right: 0;
+
+  color: $yellow;
+  font-size: 12px;
+
+  background-color: transparent;
+  border: none;
+
+  @media (min-width: $tablet-width) {
+    top: 80px;
+
+    font-size: 20px;
+  }
+
+  @media (min-width: $laptop-width) {
+    display: none;
+  }
+
+  &:active {
+    color: $yellow-dark;
+  }
+}
+
+.search-box__icon {
+  position: absolute;
+  top: 40px;
+  left: 20px;
+
+  width: 12px;
+  height: 12px;
+
+  color: $c-c4;
+
+  @media (min-width: $tablet-width) {
+    top: 83px;
+    left: 30px;
+
+    width: 24px;
+    height: 24px;
+  }
+
+  @media (min-width: $laptop-width) {
+    top: 10px;
+    left: 30px;
+
+    width: 22px;
+    height: 22px;
+  }
+
+  @media (min-width: $desktop-width) {
+    top: 14px;
+
+    width: 32px;
+    height: 31px;
+  }
+}
+
+.search-box__input {
+  display: block;
+  width: 270px;
+  height: 30px;
+  margin-bottom: 25px;
+  padding-right: 47px;
+  padding-left: 47px;
+
+  font-size: 12px;
+
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0px 0px 20px rgba($c-9d, 25%);
+
+  @media (min-width: $tablet-width) {
+    width: 580px;
+    height: 70px;
+    padding-right: 84px;
+    padding-left: 84px;
+
+    font-size: 20px;
+  }
+
+  @media (min-width: $laptop-width) {
+    width: 100%;
+    height: 42px;
+    margin-bottom: 0;
+    padding-right: 72px;
+    padding-left: 72px;
+
+    font-size: 16px;
+
+    border-radius: 30px;
+    box-shadow: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    height: 60px;
+    padding-right: 82px;
+    padding-left: 82px;
+
+    font-size: 20px;
+  }
+
+  &::placeholder {
+    color: $c-c4;
+  }
+
+  &:focus {
+    outline: none;
+
+    & + .search-box__icon {
+      color: $c-22;
+    }
+  }
+}
+
+.search-box__list {
+  @include list-reset;
+
+  display: none;
+
+  @media (min-width: $laptop-width) {
+    border-top: 1px solid $c-e9;
+  }
+
+  &--active {
+    display: block;
+  }
+}
+
+.search-box__item {
+  margin-bottom: 15px;
+
+  &--not-found {
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    color: $c-c4;
+    font-size: 12px;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 20px;
+
+      font-size: 20px;
+    }
+
+    @media (min-width: $laptop-width) {
+      margin-bottom: 0;
+      padding-right: 72px;
+      padding-left: 72px;
+
+      font-size: 16px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding-right: 82px;
+      padding-left: 82px;
+
+      font-size: 20px;
+    }
+  }
+
+  @media (min-width: $laptop-width) {
+    &:last-child,
+    &:last-child a {
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 30px;
+      border-bottom-left-radius: 30px;
+    }
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.search-box__link {
+  display: block;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  color: $c-22;
+  font-size: 12px;
+  text-decoration: none;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+  }
+
+  @media (min-width: $laptop-width) {
+    padding-right: 72px;
+    padding-left: 72px;
+
+    font-size: 16px;
+
+    &:hover {
+      background-color: $c-fc;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-right: 82px;
+    padding-left: 82px;
+
+    font-size: 20px;
+  }
+
+  &:active,
+  &--active {
+    color: $yellow;
+  }
+}

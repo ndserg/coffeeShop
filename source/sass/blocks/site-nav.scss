@@ -1,0 +1,60 @@
+.sait-nav__list {
+  @include list-reset;
+
+  @media (min-width: $laptop-width) {
+    display: flex;
+  }
+}
+
+.sait-nav__item {
+  margin-bottom: 20px;
+
+  @media (min-width: $laptop-width) {
+    margin-right: 60px;
+    margin-bottom: 0;
+  }
+
+  &:last-child {
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+}
+
+.sait-nav__link {
+  display: block;
+  padding-top: 15px;
+  padding-bottom: 15px;
+
+
+  color: $c-18;
+  font-weight: 500;
+  font-size: 16px;
+  text-decoration: none;
+
+  @media (min-width: $tablet-width) {
+    font-size: 32px;
+  }
+
+  @media (min-width: $laptop-width) {
+    padding: 0;
+
+    font-size: 18px;
+
+    &:active,
+    &--active {
+      color: $yellow;
+    }
+
+    &:hover {
+      color: $yellow-dark;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 25px;
+  }
+
+  &:active {
+    color: $yellow;
+  }
+}
