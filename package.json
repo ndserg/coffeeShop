@@ -1,0 +1,63 @@
+{
+  "name": "Coffee Shop",
+  "version": "1.0.0",
+  "description": "Coffee Shop site",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/ndserg/coffeeShop.git"
+  },
+  "author": "Denis Natalevich",
+  "scripts": {
+    "editorconfig": "editorconfig-cli",
+    "stylelint": "stylelint \"source/sass/**/*.scss\"",
+    "test": "npm run editorconfig && npm run stylelint",
+    "build": "gulp build --production",
+    "prod": "gulp prod --production",
+    "start": "gulp --development"
+  },
+  "browserslist": [
+    "last 2 versions",
+    "not dead",
+    "not ie <= 11"
+  ],
+  "editorconfig-cli": [
+    "*.json",
+    "*.js",
+    "source/*.html",
+    "source/js/**/*.js",
+    "source/img/**/*.svg",
+    "source/sass/**/*.scss"
+  ],
+  "devDependencies": {
+    "@babel/core": "7.21.4",
+    "@babel/preset-env": "7.21.4",
+    "@htmlacademy/editorconfig-cli": "1.0.0",
+    "autoprefixer": "10.4.14",
+    "browser-sync": "2.28.3",
+    "del": "6.1.1",
+    "gulp": "4.0.2",
+    "gulp-babel": "8.0.0",
+    "gulp-concat": "2.6.1",
+    "gulp-htmlmin": "5.0.1",
+    "gulp-imagemin": "7.1.0",
+    "gulp-inject": "5.0.5",
+    "gulp-mode": "1.1.0",
+    "gulp-plumber": "1.2.1",
+    "gulp-postcss": "9.0.1",
+    "gulp-rename": "2.0.0",
+    "gulp-sass": "5.1.0",
+    "gulp-sourcemaps": "3.0.0",
+    "gulp-svgstore": "9.0.0",
+    "gulp-uglify": "3.0.2",
+    "gulp-webp": "4.0.1",
+    "postcss": "8.4.21",
+    "postcss-csso": "6.0.1",
+    "postcss-scss": "4.0.6",
+    "sass": "1.59.2",
+    "stylelint": "15.4.0",
+    "stylelint-config-rational-order": "0.1.2",
+    "stylelint-config-recommended-scss": "10.0.0",
+    "stylelint-order": "6.0.3",
+    "stylelint-scss": "4.6.0"
+  }
+}
