@@ -1,0 +1,17 @@
+/* Global */
+@import "global/normalize";
+@import "global/fonts";
+@import "global/variables";
+@import "global/mixins";
+@import "global/global";
+
+
+/* Blocks */
+@import "blocks/page-main";
+@import "blocks/user-menu";
+@import "blocks/search-box";
+@import "blocks/header-main";
+@import "blocks/buttons";
+@import "blocks/logo";
+@import "blocks/site-nav";
+@import "blocks/header-contacts";
