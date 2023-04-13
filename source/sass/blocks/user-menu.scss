@@ -40,6 +40,7 @@
   height: 17px;
 
   color: $c-22;
+  vertical-align: middle;
 
   &--login {
     height: 20px;
@@ -101,9 +102,149 @@
 }
 
 .user-menu__link {
-  display: block;
+  position: relative;
+
+  display: inline-block;
 
   font-size: 0;
-  line-height: 0;
+  line-height: 28px;
+  text-align: center;
   text-decoration: none;
+
+  &--logged {
+    width: 28px;
+    height: 28px;
+
+    background-color: $c-c4;
+    border-radius: 50%;
+
+    svg {
+      display: none;
+      height: 18px;
+
+      color: $white;
+      vertical-align: middle;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    line-height: 40px;
+
+    &--logged {
+      width: 40px;
+      height: 40px;
+
+      svg {
+        height: 18px;
+      }
+    }
+  }
+
+  @media (min-width: $laptop-width) {
+    line-height: 28px;
+
+    &--logged {
+      width: 28px;
+      height: 28px;
+
+      svg {
+        height: 18px;
+      }
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    line-height: 40px;
+
+    &--logged {
+      width: 40px;
+      height: 40px;
+
+      svg {
+        height: 18px;
+      }
+    }
+  }
+}
+
+.user-menu__user-photo {
+  display: none;
+  width: 28px;
+  height: 28px;
+
+  vertical-align: middle;
+
+  @media (min-width: $tablet-width) {
+    width: 40px;
+    height: 40px;
+  }
+
+  @media (min-width: $laptop-width) {
+    width: 28px;
+    height: 28px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.user-menu__cart-goods {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+
+  display: none;
+  width: 20px;
+  height: 20px;
+  padding: 4px;
+
+  font-weight: 700;
+  font-size: 10px;
+  line-height: 12px;
+  text-align: center;
+
+  background-color: $yellow;
+  border-radius: 50%;
+
+  @media (min-width: $tablet-width) {
+    top: -10px;
+    right: -13px;
+
+    width: 28px;
+    height: 28px;
+    padding: 4px;
+
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  @media (min-width: $laptop-width) {
+    top: -11px;
+    right: -11px;
+
+    width: 22px;
+    height: 22px;
+    padding: 4px;
+
+    font-size: 12px;
+    line-height: 14px;
+  }
+
+  @media (min-width: $desktop-width) {
+    top: -15px;
+    right: -15px;
+
+    width: 30px;
+    height: 30px;
+    padding: 4px;
+
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  &--full {
+    display: block;
+  }
 }
