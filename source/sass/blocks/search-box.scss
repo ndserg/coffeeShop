@@ -45,6 +45,7 @@
 
   color: $yellow;
   font-size: 12px;
+  line-height: 16px;
 
   background-color: transparent;
   border: none;
@@ -53,6 +54,7 @@
     top: 80px;
 
     font-size: 20px;
+    line-height: 26px;
   }
 
   @media (min-width: $laptop-width) {
@@ -107,6 +109,7 @@
   padding-left: 47px;
 
   font-size: 12px;
+  line-height: 16px;
 
   border: none;
   border-radius: 20px;
@@ -119,6 +122,7 @@
     padding-left: 84px;
 
     font-size: 20px;
+    line-height: 26px;
   }
 
   @media (min-width: $laptop-width) {
@@ -129,6 +133,7 @@
     padding-left: 72px;
 
     font-size: 16px;
+    line-height: 20px;
 
     border-radius: 30px;
     box-shadow: none;
@@ -140,6 +145,7 @@
     padding-left: 82px;
 
     font-size: 20px;
+    line-height: 26px;
   }
 
   &::placeholder {
@@ -164,7 +170,7 @@
     border-top: 1px solid $c-e9;
   }
 
-  &--active {
+  &--open {
     display: block;
   }
 }
@@ -178,11 +184,13 @@
 
     color: $c-c4;
     font-size: 12px;
+    line-height: 16px;
 
     @media (min-width: $tablet-width) {
       margin-bottom: 20px;
 
       font-size: 20px;
+      line-height: 26px;
     }
 
     @media (min-width: $laptop-width) {
@@ -191,6 +199,7 @@
       padding-left: 72px;
 
       font-size: 16px;
+      line-height: 20px;
     }
 
     @media (min-width: $desktop-width) {
@@ -198,6 +207,7 @@
       padding-left: 82px;
 
       font-size: 20px;
+      line-height: 26px;
     }
   }
 
@@ -223,10 +233,12 @@
 
   color: $c-22;
   font-size: 12px;
+  line-height: 16px;
   text-decoration: none;
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
+    line-height: 26px;
   }
 
   @media (min-width: $laptop-width) {
@@ -234,6 +246,7 @@
     padding-left: 72px;
 
     font-size: 16px;
+    line-height: 20px;
 
     &:hover {
       background-color: $c-fc;
@@ -245,6 +258,7 @@
     padding-left: 82px;
 
     font-size: 20px;
+    line-height: 26px;
   }
 
   &:active,
