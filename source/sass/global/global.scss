@@ -39,3 +39,20 @@ img {
   clip: rect(0 0 0 0);
   clip-path: inset(100%);
 }
+
+.container {
+  width: $mobile-width;
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    width: $tablet-width;
+  }
+
+  @media (min-width: $laptop-width) {
+    width: $laptop-width;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: $desktop-width;
+  }
+}

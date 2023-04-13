@@ -20,23 +20,18 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: $mobile-width;
   height: 70px;
-  margin: 0 auto;
 
   @media (min-width: $tablet-width) {
     justify-content: center;
-    max-width: $tablet-width;
     height: 143px;
   }
 
   @media (min-width: $laptop-width) {
-    max-width: $laptop-width;
     height: 113px;
   }
 
   @media (min-width: $desktop-width) {
-    max-width: $desktop-width;
     height: 160px;
   }
 }
