@@ -39,5 +39,15 @@ background-size: 478px 578px,
       calc(50% - 1118px) 1006px;
     background-size: 1456px 1756px,
       1238px 1376px;
-    }
+  }
+}
+
+.page-main__slider {
+  @media (min-width: $tablet-width) {
+    margin-bottom: 70px;
+  }
+
+  @media (min-width: $laptop-width) {
+    margin-bottom: 0;
+  }
 }

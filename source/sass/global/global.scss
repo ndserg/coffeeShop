@@ -23,6 +23,55 @@ img {
   height: auto;
 }
 
+h2 {
+  margin: 0;
+
+  color: $black;
+  font-weight: 900;
+  font-size: 20px;
+  line-height: 26px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 40px;
+    line-height: 50px;
+  }
+
+  @media (min-width: $laptop-width) {
+    font-size: 36px;
+    line-height: 44px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 50px;
+    line-height: 62px;
+  }
+}
+
+h3 {
+  margin: 0;
+
+  color: $black;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 22px;
+    line-height: 28px;
+  }
+
+  @media (min-width: $laptop-width) {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 24px;
+    line-height: 30px;
+  }
+}
+
 .visually-hidden {
   position: absolute;
 
