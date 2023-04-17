@@ -66,3 +66,13 @@ background-size: 478px 578px,
 .page-main__catalog {
   margin-bottom: 60px;
 }
+
+.page-main__sales {
+  @media (min-width: $tablet-width) {
+    margin-bottom: 125px;
+  }
+
+  @media (min-width: $laptop-width) {
+    margin-bottom: 0;
+  }
+}
