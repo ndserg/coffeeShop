@@ -191,3 +191,64 @@
     background-color: $yellow-dark;
   }
 }
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+
+  column-gap: 13px;
+  row-gap: 30px;
+
+  @media (min-width: $tablet-width) {
+    column-gap: 30px;
+  }
+
+  @media (min-width: $laptop-width) {
+    column-gap: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    column-gap: 30px;
+  }
+}
+
+.control {
+  width: 13px;
+  height: 13px;
+  padding: 0;
+
+  font-size: 0;
+
+  background-color: $c-e9;
+  border: none;
+  border-radius: 50%;
+
+  cursor: pointer;
+
+  &--current {
+    background-color: $yellow;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
+  &:hover {
+    background-color: $yellow-dark;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 25px;
+    height: 25px;
+  }
+
+  @media (min-width: $laptop-width) {
+    width: 14px;
+    height: 14px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 20px;
+    height: 20px;
+  }
+}

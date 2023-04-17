@@ -13,13 +13,21 @@
 .main-catalog__list {
   @include list-reset;
 
-  position: relative;
+  display: flex;
+  align-items: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  overflow-x: hidden;
 
   @media (min-width: $laptop-width) {
     display: grid;
     grid-auto-rows: auto;
     grid-template-columns: repeat(4, 1fr);
     justify-content: space-between;
+
+    padding: 0;
+
+    overflow: initial;
 
     row-gap: 30px;
   }
@@ -69,35 +77,20 @@
 }
 
 .main-catalog__item {
-  display: none;
-
-  width: 272px;
-  margin: 0 auto;
+  flex-shrink: 0;
+  width: 194px;
+  height: 350px;
+  margin-right: 20px;
 
   background-color: $white;
   border-radius: 10px;
   box-shadow: 0px 0px 30px rgba($c-92, 20%);
 
-  &--prev {
-    position: absolute;
-    top: 10%;
-    left: -75%;
-
-    display: block;
-    height: 80%;
-  }
-
-  &--next {
-    position: absolute;
-    top: 10%;
-    right: -75%;
-
-    display: block;
-    height: 80%;
-  }
+  transform: translateX(-180px);
 
   &--current {
-    display: block;
+    width: 272px;
+    height: 100%;
 
     .main-catalog__link {
       display: inline-block;
@@ -105,22 +98,16 @@
   }
 
   @media (min-width: $tablet-width) {
-    width: 460px;
+    width: 368px;
+    height: 388px;
 
     border-radius: 12px;
 
-    &--prev {
-      top: 10%;
-      left: -52%;
+    transform: translateX(-268px);
 
-      height: 80%;
-    }
-
-    &--next {
-      top: 10%;
-      right: -52%;
-
-      height: 80%;
+    &--current {
+      width: 460px;
+      height: 100%;
     }
   }
 
@@ -132,6 +119,14 @@
     height: 381px;
 
     border-radius: 14px;
+
+    transform: none;
+
+    &--current {
+      .main-catalog__link {
+        display: none;
+      }
+    }
 
     &:hover {
       .main-catalog__item-wrapper {
@@ -193,6 +188,7 @@
 .main-catalog__img-box {
   display: inline-block;
   width: 100%;
+  margin: 0;
   margin-bottom: 15px;
 
   text-align: center;
@@ -217,4 +213,20 @@
 
 .main-catalog__img {
   vertical-align: middle;
+}
+
+.main-catalog__controls {
+  @include list-reset;
+
+  justify-content: center;
+  width: 170px;
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    width: 340px;
+  }
+
+  @media (min-width: $laptop-width) {
+    display: none;
+  }
 }
