@@ -1,0 +1,214 @@
+.benefits {
+  background-color: $corn-silk;
+
+  background-image: url(/img/bg/pink-bg.svg);
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-size: 100%;
+}
+
+.benefits__wrapper {
+  padding-top: 45px;
+  padding-bottom: 60px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 65px;
+    padding-bottom: 50px;
+  }
+
+  @media (min-width: $laptop-width) {
+    padding-top: 95px;
+    padding-left: 600px;
+
+    background-image: url(/img/bg/cup-coffee-laptop.png);
+    background-repeat: no-repeat;
+    background-position: 0 70%;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 125px;
+    padding-bottom: 68px;
+    padding-left: 840px;
+
+    background-image: url(/img/bg/cup-coffee-desktop.png);
+  }
+}
+
+.benefits__title {
+  width: 230px;
+  margin-bottom: 30px;
+
+  @media (min-width: $tablet-width) {
+    width: 465px;
+    margin-bottom: 60px;
+  }
+
+  @media (min-width: $laptop-width) {
+    width: 415px;
+    margin-bottom: 58px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 590px;
+    margin-bottom: 80px;
+  }
+}
+
+.benefits__list {
+  @include list-reset;
+}
+
+.benefits__list-item {
+  position: relative;
+
+  margin-bottom: 30px;
+  padding-right: 30px;
+  padding-left: 60px;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: block;
+    width: 40px;
+    height: 40px;
+
+    background-color: $yellow;
+    background-repeat: no-repeat;
+    background-position: 55% 50%;
+    background-size: 15px 15px;
+    border-radius: 50%;
+
+    content: "";
+  }
+
+  &--cup {
+    &::before {
+      background-image: url(/icons/flat-cup.svg);
+    }
+  }
+
+  &--price {
+    &::before {
+      background-image: url(/icons/flat-price.svg);
+    }
+  }
+
+  &--consult {
+    &::before {
+      background-image: url(/icons/flat-consult.svg);
+      background-size: 17px 15px;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 60px;
+    padding-right: 134px;
+    padding-left: 121px;
+
+    &::before {
+      width: 81px;
+      height: 81px;
+
+      background-size: 30px 30px;
+    }
+
+    &--consult {
+      &::before {
+        background-size: 36px 30px;
+      }
+    }
+  }
+
+  @media (min-width: $laptop-width) {
+    margin-bottom: 40px;
+    padding-right: 118px;
+    padding-left: 90px;
+
+    &::before {
+      width: 60px;
+      height: 60px;
+
+      background-size: 22px 22px;
+    }
+
+    &--consult {
+      &::before {
+        background-size: 26px 22px;
+      }
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 60px;
+    padding-right: 149px;
+    padding-left: 134px;
+
+    &::before {
+      width: 84px;
+      height: 84px;
+
+      background-size: 32px 32px;
+    }
+
+    &--consult {
+      &::before {
+        background-size: 36px 30px;
+      }
+    }
+  }
+}
+
+.benefits__item-title {
+  margin: 0;
+  margin-bottom: 10px;
+
+  color: $black;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 20px;
+
+    font-size: 25px;
+    line-height: 30px;
+  }
+
+  @media (min-width: $laptop-width) {
+    margin-bottom: 15px;
+
+    font-size: 22px;
+    line-height: 26px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 20px;
+
+    font-size: 30px;
+    line-height: 36px;
+  }
+}
+
+.benefits__item-description {
+  margin: 0;
+
+  font-size: 12px;
+  line-height: 16px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 26px;
+  }
+
+  @media (min-width: $laptop-width) {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 26px;
+    line-height: 32px;
+  }
+}
