@@ -166,21 +166,13 @@
 .slider-main__controls {
   @include list-reset;
 
-  display: grid;
-  grid-auto-rows: auto;
-  grid-template-columns: repeat(3, 13px);
+  width: 117px;
 
   margin-bottom: 70px;
 
-  column-gap: 13px;
-  row-gap: 30px;
-
   @media (min-width: $tablet-width) {
-    grid-template-columns: repeat(5, 25px);
-
+    width: 245px;
     margin-bottom: 145px;
-
-    column-gap: 30px;
   }
 
   @media (min-width: $laptop-width) {
@@ -189,60 +181,39 @@
     right: 0;
     z-index: 2;
 
-    display: block;
+    justify-content: flex-end;
+    width: 184px;
     margin-bottom: 0;
   }
 
   @media (min-width: $desktop-width) {
     top: -30px;
+
+    width: 270px;
   }
 }
 
 .slider-main__control {
-  width: 13px;
-  height: 13px;
-
-  font-size: 0;
-
-  background-color: $c-e9;
-  border-radius: 50%;
-
-  cursor: pointer;
-
-  &--current {
-    background-color: $yellow;
-  }
-
-  &:active {
-    opacity: 0.6;
-  }
-
-  &:hover {
-    background-color: $yellow-dark;
-  }
-
   @media (min-width: $tablet-width) {
     width: 25px;
     height: 25px;
   }
 
   @media (min-width: $laptop-width) {
-    display: inline-block;
     width: 14px;
     height: 14px;
-    margin-right: 20px;
 
     background-color: $white;
 
-    &--current {
+    &.control--current {
       background-color: $c-40;
     }
 
-    &:active {
+    &.control:active {
       opacity: 0.6;
     }
 
-    &:hover {
+    &.control--:hover {
       background-color: $c-e9;
     }
   }

@@ -32,6 +32,10 @@
   line-height: 20px;
   text-decoration: none;
 
+  &--current {
+    border-bottom: 2px solid $yellow;
+  }
+
   @media (min-width: $tablet-width) {
     font-size: 32px;
     line-height: 38px;
@@ -43,22 +47,17 @@
     font-size: 18px;
     line-height: 22px;
 
-    &:active,
-    &--active {
-      color: $yellow;
-    }
-
     &:hover {
       color: $yellow-dark;
+    }
+
+    &:active {
+      color: $yellow;
     }
   }
 
   @media (min-width: $desktop-width) {
     font-size: 25px;
     line-height: 31px;
-  }
-
-  &:active {
-    color: $yellow;
   }
 }

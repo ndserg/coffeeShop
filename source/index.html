@@ -24,7 +24,7 @@
           </li>
 
           <li class="sait-nav__item">
-            <a class="sait-nav__link" href="#">Блог</a>
+            <a class="sait-nav__link sait-nav__link--current" href="#">Блог</a>
           </li>
 
           <li class="sait-nav__item">
@@ -130,10 +130,16 @@
           Мы обжариваем кофе<br> <b>каждые выходные.</b>
         </p>
 
-        <ul class="slider-main__controls">
-          <li class="slider-main__control slider-main__control--current">Слайд 1</li>
-          <li class="slider-main__control">Слайд 2</li>
-          <li class="slider-main__control">Слайд 3</li>
+        <ul class="slider-main__controls controls">
+          <li class="controls__item">
+            <button class="slider-main__control control control--current">Слайд 1</button>
+          </li>
+          <li class="controls__item">
+            <button class="slider-main__control control">Слайд 2</button>
+          </li>
+          <li class="controls__item">
+            <button class="slider-main__control control">Слайд 3</button>
+          </li>
         </ul>
 
         <a class="slider-main__button button-big" href="#">Посмотреть каталог</a>
@@ -149,7 +155,7 @@
       </div>
     </section>
 
-    <section class="main-catalog container">
+    <section class="page-main__catalog main-catalog container">
       <h2 class="main-catalog__title">Каталоги нашей продукции</h2>
 
       <ul class="main-catalog__list">
@@ -163,7 +169,7 @@
           </div>
         </li>
 
-        <li class="main-catalog__item">
+        <li class="main-catalog__item main-catalog__item--current">
           <div class="main-catalog__item-wrapper">
             <h3 class="main-catalog__item-title">Чай и кофейные напитки</h3>
             <figure class="main-catalog__img-box">
@@ -193,6 +199,188 @@
           </div>
         </li>
       </ul>
+
+      <ul class="main-catalog__controls controls">
+        <li class="contols__item">
+          <button class="main-catalog__control control control--current" type="button">Свежеобжаренный кофе</button>
+        </li>
+        <li class="contols__item">
+          <button class="main-catalog__control control" type="button">Чай и кофейные напитки</button>
+        </li>
+        <li class="contols__item">
+          <button class="main-catalog__control control" type="button">Продукция для вендинга</button>
+        </li>
+        <li class="contols__item">
+          <button class="main-catalog__control control" type="button">Здоровое питание</button>
+        </li>
+      </ul>
+    </section>
+
+    <section class="page-main__sales sales container">
+      <h2 class="sales__title">Товары со скидкой</h2>
+
+      <p class="sales__promo-text">
+        Наша компания предлагает покупать товар со скидкой не только в дни распродаж или в течение действия ограниченных предложений, но и пользоваться скидками постоянно!
+      </p>
+
+      <ul class="sales__list">
+        <li class="sales__item">
+          <span class="sales_promo-badge">Скидки</span>
+          <h3 class="sales__item-title">Colombia Supremo</h3>
+          <p class="sales__item-description">Свежеобжаренный кофе -<br> описание товара, вкус, аромат</p>
+          <select class="sales__weight" name="weight" id="weight-1">
+            <option value="100">100 г.</option>
+            <option value="250">250 г.</option>
+            <option value="300">300 г.</option>
+            <option value="500">500 г.</option>
+          </select>
+          <figure class="sales__img-box">
+            <picture>
+              <source media="(min-width: 1660px)" srcset="/img/sales/coffee-packet-desktop.jpg">
+              <source media="(min-width: 1180px)" srcset="/img/sales/coffee-packet-laptop.jpg">
+              <source media="(min-width: 700px)" srcset="/img/sales/coffee-packet-tablet.jpg">
+              <img class="sales__img" src="/img/sales/coffee-packet-mobile.jpg" width="107" height="193" alt="Чашка каши с джемом">
+            </picture>
+          </figure>
+          <ul class="sales__features">
+            <li class="sales__features-item sales__rewiews">
+              <div class="sales__rating-stars rating__stars">
+                <span style="width: 80%;"></span>
+              </div>
+              <span class="sales__rewiews-text"><b>4.0</b> (32 отзыва)</span>
+            </li>
+            <li class="sales__features-item sales__strength rating__strength">
+              <span style="width: 60%;"></span>
+            </li>
+            <li class="sales__features-item sales__item-feature">
+              <span class="sales__feature-name">Кислинка</span>
+              <div class="sales__rating-feature rating__feature">
+                <span style="width: 70%;"></span>
+              </div>
+            </li>
+            <li class="sales__features-item sales__item-feature">
+              <span class="sales__feature-name">Горчинка</span>
+              <div class="sales__rating-feature rating__feature">
+                <span style="width: 50%;"></span>
+              </div>
+            </li>
+            <li class="sales__features-item sales__item-feature">
+              <span class="sales__feature-name">Насыщенность</span>
+              <div class="sales__rating-feature rating__feature">
+                <span style="width: 60%;"></span>
+              </div>
+            </li>
+          </ul>
+          <p class="sales__price" data-old_price="250">350 &#8381;</p>
+          <a class="sales__item-link button button-small" href="#">В корзину</a>
+        </li>
+
+        <li class="sales__item">
+          <span class="sales_promo-badge">Скидки</span>
+          <h3 class="sales__item-title">Colombia Supremo</h3>
+          <p class="sales__item-description">Свежеобжаренный кофе -<br> описание товара, вкус, аромат</p>
+          <select class="sales__weight" name="weight" id="weight-2">
+            <option value="100">100 г.</option>
+            <option value="250">250 г.</option>
+            <option value="300">300 г.</option>
+            <option value="500">500 г.</option>
+          </select>
+          <figure class="sales__img-box">
+            <picture>
+              <source media="(min-width: 1660px)" srcset="/img/sales/coffee-packet-desktop.jpg">
+              <source media="(min-width: 1180px)" srcset="/img/sales/coffee-packet-laptop.jpg">
+              <source media="(min-width: 700px)" srcset="/img/sales/coffee-packet-tablet.jpg">
+              <img class="sales__img" src="/img/sales/coffee-packet-mobile.jpg" width="107" height="193" alt="Чашка каши с джемом">
+            </picture>
+          </figure>
+          <ul class="sales__features">
+            <li class="sales__features-item sales__rewiews">
+              <div class="sales__rating-stars rating__stars">
+                <span style="width: 80%;"></span>
+              </div>
+              <span class="sales__rewiews-text"><b>4.0</b> (32 отзыва)</span>
+            </li>
+            <li class="sales__features-item sales__strength rating__strength">
+              <span style="width: 60%;"></span>
+            </li>
+            <li class="sales__features-item sales__item-feature">
+              <span class="sales__feature-name">Кислинка</span>
+              <div class="sales__rating-feature rating__feature">
+                <span style="width: 70%;"></span>
+              </div>
+            </li>
+            <li class="sales__features-item sales__item-feature">
+              <span class="sales__feature-name">Горчинка</span>
+              <div class="sales__rating-feature rating__feature">
+                <span style="width: 50%;"></span>
+              </div>
+            </li>
+            <li class="sales__features-item sales__item-feature">
+              <span class="sales__feature-name">Насыщенность</span>
+              <div class="sales__rating-feature rating__feature">
+                <span style="width: 60%;"></span>
+              </div>
+            </li>
+          </ul>
+          <p class="sales__price" data-old_price="250">350 &#8381;</p>
+          <a class="sales__item-link button button-small" href="#">В корзину</a>
+        </li>
+
+        <li class="sales__item">
+          <span class="sales_promo-badge">Скидки</span>
+          <h3 class="sales__item-title">Colombia Supremo</h3>
+          <p class="sales__item-description">Свежеобжаренный кофе -<br> описание товара, вкус, аромат</p>
+          <select class="sales__weight" name="weight" id="weight-3">
+            <option value="100">100 г.</option>
+            <option value="250">250 г.</option>
+            <option value="300">300 г.</option>
+            <option value="500">500 г.</option>
+          </select>
+          <figure class="sales__img-box">
+            <picture>
+              <source media="(min-width: 1660px)" srcset="/img/sales/coffee-packet-desktop.jpg">
+              <source media="(min-width: 1180px)" srcset="/img/sales/coffee-packet-laptop.jpg">
+              <source media="(min-width: 700px)" srcset="/img/sales/coffee-packet-tablet.jpg">
+              <img class="sales__img" src="/img/sales/coffee-packet-mobile.jpg" width="107" height="193" alt="Чашка каши с джемом">
+            </picture>
+          </figure>
+          <ul class="sales__features">
+            <li class="sales__features-item sales__rewiews">
+              <div class="sales__rating-stars rating__stars">
+                <span style="width: 80%;"></span>
+              </div>
+              <span class="sales__rewiews-text"><b>4.0</b> (32 отзыва)</span>
+            </li>
+            <li class="sales__features-item sales__strength rating__strength">
+              <span style="width: 60%;"></span>
+            </li>
+            <li class="sales__features-item sales__item-feature">
+              <span class="sales__feature-name">Кислинка</span>
+              <div class="sales__rating-feature rating__feature">
+                <span style="width: 70%;"></span>
+              </div>
+            </li>
+            <li class="sales__features-item sales__item-feature">
+              <span class="sales__feature-name">Горчинка</span>
+              <div class="sales__rating-feature rating__feature">
+                <span style="width: 50%;"></span>
+              </div>
+            </li>
+            <li class="sales__features-item sales__item-feature">
+              <span class="sales__feature-name">Насыщенность</span>
+              <div class="sales__rating-feature rating__feature">
+                <span style="width: 60%;"></span>
+              </div>
+            </li>
+          </ul>
+          <p class="sales__price" data-old_price="250">350 &#8381;</p>
+          <a class="sales__item-link button button-small" href="#">В корзину</a>
+        </li>
+      </ul>
+
+      <button class="sales-button sales-button--prev">&#8592;</button>
+      <button class="sales-button sales-button--next">&#8594;</button>
+      <a class="sales__link" href="#">Смотреть все</a>
     </section>
   </main>
 
