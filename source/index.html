@@ -380,7 +380,8 @@
 
       <button class="sales-button sales-button--prev">&#8592;</button>
       <button class="sales-button sales-button--next">&#8594;</button>
-      <a class="sales__link" href="#">Смотреть все</a>
+
+      <a class="page-main__text-link sales__link" href="#">Смотреть все</a>
     </section>
 
     <section class="page-main__benefits benefits">
@@ -419,6 +420,52 @@
         <p class="process-description">Мы раскрываем вкус каждого сорта кофе.</p>
 
         <button class="process__button button button--medium" type="button">Посмотреть каталог</button>
+      </div>
+    </section>
+
+    <section class="page-main__news news">
+      <div class="news__wrapper container">
+        <h2 class="news__title">Новости компании</h2>
+
+        <div class="news_buttons">
+          <button class="news-button news-button--prev" type="button">
+            Назад
+            <svg class="news-button__icon news-button__icon--prev" width="101" height="16">
+              <use xlink:href="icons/sprite.svg#long-arrow-left"></use>
+            </svg>
+          </button>
+          <button class="news-button news-button--next" type="button">
+            Вперед
+            <svg class="news-button__icon news-button__icon--next" width="101" height="16">
+              <use xlink:href="icons/sprite.svg#long-arrow-left"></use>
+            </svg>
+          </button>
+        </div>
+
+        <ul class="news__list">
+          <li class="news__list-item news-item">
+            <div class="news-item__content">
+              <h3 class="news-item__title">Танзанийский кофе. Откуда он взялся и почему мы его так любим?</h3>
+
+              <div class="news-item__description">
+                <p>Танзания – красивая африканская страна. Именно здесь расположены легендарные географические объекты – вулкан Килиманджаро и озеро Виктория.</p>
+
+                <p>Но наш интерес вызван не столько природными красотами, сколько кофе...</p>
+              </div>
+
+              <a class="page-main__text-link news-item__link" href="#">Подробнее &#8594;</a>
+            </div>
+
+            <figure class="news-item__img">
+              <picture>
+                <source media="(min-width: 700px)" srcset="/img/news/news-img-tablet.png">
+                <img src="/img/news/news-img-mobile.jpg" width="340" height="137" alt="Лев на упаковке Танзанского кофе">
+              </picture>
+            </figure>
+          </li>
+        </ul>
+
+        <a class="page-main__text-link news__link" href="#">Читать все</a>
       </div>
     </section>
   </main>
