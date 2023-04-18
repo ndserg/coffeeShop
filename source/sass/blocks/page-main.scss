@@ -76,3 +76,36 @@ background-size: 478px 578px,
     margin-bottom: 0;
   }
 }
+
+.page-main__text-link {
+  display: inline-block;
+  padding-top: 5px;
+  padding-right: 15px;
+  padding-bottom: 5px;
+  padding-left: 15px;
+
+  color: $black;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 10px;
+    padding-right: 30px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+  }
+
+  @media (min-width: $laptop-width) {
+    &:hover {
+      color: $yellow;
+
+      background-color: $c-f9;
+      border-radius: 30px;
+    }
+  }
+
+  &:active {
+    color: $yellow;
+
+    background-color: $c-f9;
+    border-radius: 30px;
+  }
+}
