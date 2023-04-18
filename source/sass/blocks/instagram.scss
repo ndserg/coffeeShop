@@ -13,12 +13,12 @@
 
   &::after {
     position: absolute;
-    bottom: -70px;
+    bottom: -94px;
     z-index: -1;
 
     display: block;
     width: 100%;
-    height: 70px;
+    height: 94px;
 
     background-image: url(/img/bg/yellow-bottom-bg.svg);
     background-repeat: no-repeat;
@@ -38,6 +38,12 @@
     background-repeat: no-repeat;
     background-position: calc(50% + 250px) 90px, 50% 210px, 0 0;
     background-size: 400px 790px, 130%, auto;
+
+    &::after {
+      bottom: -152px;
+
+      height: 152px;
+    }
   }
 
   @media (min-width: $laptop-width) {
@@ -67,9 +73,9 @@
     background-size: 509px 791px, auto;
 
     &::after {
-      bottom: -204px;
+      bottom: -288px;
 
-      height: 204px;
+      height: 288px;
     }
   }
 }

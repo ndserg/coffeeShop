@@ -1,0 +1,238 @@
+.subscription {
+  @media (min-width: $laptop-width) {
+    padding-bottom: 60px;
+
+    background-image: url(/img/cup-coffee-644x456.png);
+    background-repeat: no-repeat;
+    background-position: calc(50% + 440px) 0;
+    background-size: auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    background-image: url(/img/cup-coffee-916x773.png);
+    background-position: calc(50% + 630px) -45px;
+    background-size: 802px;
+  }
+}
+
+.subscription__wrapper {
+  padding-top: 280px;
+
+  background-image: url(/img/cup-coffee-397x281.png);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 560px;
+
+    background-image: url(/img/cup-coffee-644x456.png);
+  }
+
+  @media (min-width: $laptop-width) {
+    padding-top: 150px;
+
+    background-image: none;
+  }
+}
+
+.subscription__title {
+  margin-bottom: 30px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 50px;
+
+    font-size: 30px;
+    line-height: 36px;
+  }
+
+  @media (min-width: $laptop-width) {
+    margin-bottom: 40px;
+
+    font-size: 36px;
+    line-height: 44px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 50px;
+
+    font-size: 50px;
+    line-height: 62px;
+  }
+}
+
+.subscription__info {
+  margin: 0;
+  margin-bottom: 20px;
+
+  font-size: 14px;
+  line-height: 18px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 50px;
+
+    font-size: 20px;
+    line-height: 26px;
+  }
+
+  @media (min-width: $laptop-width) {
+    width: 546px;
+    margin-bottom: 40px;
+
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 788px;
+    margin-bottom: 60px;
+
+    font-size: 26px;
+    line-height: 32px;
+  }
+}
+
+.subscription__form {
+  margin-bottom: 10px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 20px;
+  }
+
+  @media (min-width: $laptop-width) {
+    position: relative;
+
+    width: 780px;
+    margin-bottom: 15px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1100px;
+    margin-bottom: 20px;
+  }
+}
+
+.subscription__email {
+  width: 100%;
+  margin-bottom: 20px;
+  padding-top: 15px;
+  padding-right: 40px;
+  padding-bottom: 15px;
+  padding-left: 40px;
+
+  font-size: 14px;
+  line-height: 18px;
+
+  background-color: $c-f3;
+  border: none;
+  border-radius: 5px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 20px;
+    padding-right: 80px;
+    padding-bottom: 20px;
+    padding-left: 80px;
+
+    font-size: 22px;
+    line-height: 28px;
+  }
+
+  @media (min-width: $laptop-width) {
+    margin-bottom: 0;
+    padding-top: 16px;
+    padding-right: 220px;
+    padding-bottom: 16px;
+    padding-left: 40px;
+
+    font-size: 18px;
+    line-height: 22px;
+
+    border-radius: 28px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 24px;
+    padding-bottom: 24px;
+    padding-left: 60px;
+
+    font-size: 26px;
+    line-height: 32px;
+
+    border-radius: 40px;
+  }
+
+  &::placeholder {
+    color: $c-c9;
+  }
+}
+
+.subscription__button {
+  width: 100%;
+
+  @media (min-width: $laptop-width) {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    width: auto;
+
+    padding-top: 16px;
+    padding-right: 34px;
+    padding-bottom: 16px;
+    padding-left: 34px;
+
+    font-size: 18px;
+    line-height: 22px;
+
+    border-radius: 28px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 24px;
+    padding-right: 52px;
+    padding-bottom: 24px;
+    padding-left: 52px;
+
+    font-size: 26px;
+    line-height: 32px;
+
+    border-radius: 40px;
+  }
+}
+
+.subscription__agreement {
+  width: 245px;
+  margin: 0;
+
+  color: $c-5b;
+  font-size: 10px;
+  line-height: 14px;
+
+  @media (min-width: $tablet-width) {
+    width: 492px;
+
+    font-size: 20px;
+    line-height: 26px;
+  }
+
+  @media (min-width: $laptop-width) {
+    width: 780px;
+
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+
+.subscription__agreement-link {
+  color: $yellow;
+  text-decoration: none;
+
+  &:visited {
+    color: $yellow-dark;
+  }
+}
