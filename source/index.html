@@ -130,17 +130,11 @@
           Мы обжариваем кофе<br> <b>каждые выходные.</b>
         </p>
 
-        <ul class="slider-main__controls controls">
-          <li class="controls__item">
-            <button class="slider-main__control control control--current">Слайд 1</button>
-          </li>
-          <li class="controls__item">
-            <button class="slider-main__control control">Слайд 2</button>
-          </li>
-          <li class="controls__item">
-            <button class="slider-main__control control">Слайд 3</button>
-          </li>
-        </ul>
+        <div class="slider-main__controls controls">
+          <button class="slider-main__control control control--current">Слайд 1</button>
+          <button class="slider-main__control control">Слайд 2</button>
+          <button class="slider-main__control control">Слайд 3</button>
+        </div>
 
         <a class="slider-main__button button button--big" href="#">Посмотреть каталог</a>
       </div>
@@ -200,20 +194,12 @@
         </li>
       </ul>
 
-      <ul class="main-catalog__controls controls">
-        <li class="contols__item">
-          <button class="main-catalog__control control control--current" type="button">Свежеобжаренный кофе</button>
-        </li>
-        <li class="contols__item">
-          <button class="main-catalog__control control" type="button">Чай и кофейные напитки</button>
-        </li>
-        <li class="contols__item">
-          <button class="main-catalog__control control" type="button">Продукция для вендинга</button>
-        </li>
-        <li class="contols__item">
-          <button class="main-catalog__control control" type="button">Здоровое питание</button>
-        </li>
-      </ul>
+      <div class="main-catalog__controls controls">
+        <button class="main-catalog__control control control--current" type="button">Свежеобжаренный кофе</button>
+        <button class="main-catalog__control control" type="button">Чай и кофейные напитки</button>
+        <button class="main-catalog__control control" type="button">Продукция для вендинга</button>
+        <button class="main-catalog__control control" type="button">Здоровое питание</button>
+      </div>
     </section>
 
     <section class="page-main__sales sales container">
@@ -443,25 +429,92 @@
         </div>
 
         <ul class="news__list">
-          <li class="news__list-item news-item">
-            <div class="news-item__content">
-              <h3 class="news-item__title">Танзанийский кофе. Откуда он взялся и почему мы его так любим?</h3>
+          <li class="news__list-item news__list-item--current">
+            <article class="news-item">
+              <div class="news-item__content">
+                <h3 class="news-item__title">Танзанийский кофе. Откуда он взялся и почему мы его так любим?</h3>
 
-              <div class="news-item__description">
-                <p>Танзания – красивая африканская страна. Именно здесь расположены легендарные географические объекты – вулкан Килиманджаро и озеро Виктория.</p>
+                <div class="news-item__description">
+                  <p>Танзания – красивая африканская страна. Именно здесь расположены легендарные географические объекты – вулкан Килиманджаро и озеро Виктория.</p>
 
-                <p>Но наш интерес вызван не столько природными красотами, сколько кофе...</p>
+                  <p>Но наш интерес вызван не столько природными красотами, сколько кофе...</p>
+                </div>
+
+                <a class="page-main__text-link news-item__link" href="#">Подробнее &#8594;</a>
               </div>
 
-              <a class="page-main__text-link news-item__link" href="#">Подробнее &#8594;</a>
-            </div>
-
-            <figure class="news-item__img">
               <picture>
-                <source media="(min-width: 700px)" srcset="/img/news/news-img-tablet.png">
-                <img src="/img/news/news-img-mobile.jpg" width="340" height="137" alt="Лев на упаковке Танзанского кофе">
+                <source media="(min-width: 1660px)" srcset="/img/news/news-img-desktop.jpg">
+                <source media="(min-width: 1180px)" srcset="/img/news/news-img-laptop.jpg">
+                <source media="(min-width: 700px)" srcset="/img/news/news-img-tablet.jpg">
+                <img class="news-item__img" src="/img/news/news-img-tablet.jpg" width="340" height="137" alt="Лев на упаковке Танзанского кофе">
               </picture>
-            </figure>
+            </article>
+          </li>
+
+          <li class="news__list-item">
+            <article class="news-item news-item--short">
+              <div class="news-item__content">
+                <h3 class="news-item__title">Африканский кофе Кения АА</h3>
+
+                <div class="news-item__description">
+                  <p>Кения АА – у этого кофе, из африканской страны, репутация одного из самых вкусных и ярких сортов в мире. Многие обжарщики высоко оценивают местные разновидности высокогорной арабики.</p>
+                </div>
+
+                <a class="page-main__text-link news-item__link" href="#">Подробнее &#8594;</a>
+              </div>
+
+              <picture>
+                <source media="(min-width: 1660px)" srcset="/img/news/news-img-desktop.jpg">
+                <source media="(min-width: 1180px)" srcset="/img/news/news-img-laptop.jpg">
+                <source media="(min-width: 700px)" srcset="/img/news/news-img-tablet.jpg">
+                <img class="news-item__img" src="/img/news/news-img-tablet.jpg" width="340" height="137" alt="Лев на упаковке Танзанского кофе">
+              </picture>
+            </article>
+          </li>
+
+          <li class="news__list-item">
+            <article class="news-item news-item--short">
+              <div class="news-item__content">
+                <h3 class="news-item__title">Танзанийский кофе. Откуда он взялся и почему мы его так любим?</h3>
+
+                <div class="news-item__description">
+                  <p>Танзания – красивая африканская страна. Именно здесь расположены легендарные географические объекты – вулкан Килиманджаро и озеро Виктория.</p>
+
+                  <p>Но наш интерес вызван не столько природными красотами, сколько кофе...</p>
+                </div>
+
+                <a class="page-main__text-link news-item__link" href="#">Подробнее &#8594;</a>
+              </div>
+
+              <picture>
+                <source media="(min-width: 1660px)" srcset="/img/news/news-img-desktop.jpg">
+                <source media="(min-width: 1180px)" srcset="/img/news/news-img-laptop.jpg">
+                <source media="(min-width: 700px)" srcset="/img/news/news-img-tablet.jpg">
+                <img class="news-item__img" src="/img/news/news-img-tablet.jpg" width="340" height="137" alt="Лев на упаковке Танзанского кофе">
+              </picture>
+            </article>
+          </li>
+
+          <li class="news__list-item">
+            <article class="news-item">
+              <div class="news-item__content">
+                <h3 class="news-item__title">Африканский кофе Кения АА</h3>
+
+                <div class="news-item__description">
+                  <p>Кения АА – у этого кофе, из африканской страны, репутация одного из самых вкусных и ярких сортов в мире. Многие обжарщики высоко оценивают местные разновидности высокогорной арабики.</p>
+                </div>
+
+                <a class="page-main__text-link news-item__link" href="#">Подробнее &#8594;</a>
+              </div>
+
+              <picture>
+                <source media="(min-width: 1660px)" srcset="/img/news/news-img-desktop.jpg">
+                <source media="(min-width: 1180px)" srcset="/img/news/news-img-laptop.jpg">
+                <source media="(min-width: 700px)" srcset="/img/news/news-img-tablet.jpg">
+                <img class="news-item__img" src="/img/news/news-img-tablet.jpg" width="340" height="137" alt="Лев на упаковке Танзанского кофе">
+              </picture>
+            </article>
           </li>
         </ul>
 

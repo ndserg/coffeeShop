@@ -216,8 +216,6 @@
 }
 
 .main-catalog__controls {
-  @include list-reset;
-
   justify-content: center;
   width: 170px;
   margin: 0 auto;
