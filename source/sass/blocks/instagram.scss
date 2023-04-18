@@ -1,0 +1,286 @@
+.instagram {
+  position: relative;
+
+  min-height: 395px;
+  padding-bottom: 26px;
+
+  background-image: url(/img/bg/iphone-mobile.png),
+    url(/img/bg/ellipse-bg.svg),
+    linear-gradient(to bottom, $corn-silk 210px, $yellow 210px, $yellow);
+  background-repeat: no-repeat;
+  background-position: calc(50% + 120px) 50px, 50% 120px, 0 0;
+  background-size: 200px 395px, 130%, auto;
+
+  &::after {
+    position: absolute;
+    bottom: -70px;
+    z-index: -1;
+
+    display: block;
+    width: 100%;
+    height: 70px;
+
+    background-image: url(/img/bg/yellow-bottom-bg.svg);
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    background-size: 100%;
+
+    content: "";
+  }
+
+  @media (min-width: $tablet-width) {
+    min-height: 880px;
+    padding-top: 30px;
+
+    background-image: url(/img/bg/iphone-tablet.png),
+      url(/img/bg/ellipse-bg.svg),
+      linear-gradient(to bottom, $corn-silk 300px, $yellow 300px, $yellow);
+    background-repeat: no-repeat;
+    background-position: calc(50% + 250px) 90px, 50% 210px, 0 0;
+    background-size: 400px 790px, 130%, auto;
+  }
+
+  @media (min-width: $laptop-width) {
+    min-height: 670px;
+
+    background-image: url(/img/bg/iphone-laptop.png),
+      url(/img/bg/ellipse-bg.svg),
+      linear-gradient(to bottom, $corn-silk 300px, $yellow 300px, $yellow);
+    background-repeat: no-repeat;
+    background-position: calc(50% - 380px) 120px, 50% 180px, 0 0;
+    background-size: 361px 561px, 130%, auto;
+
+    &::after {
+      bottom: -204px;
+
+      height: 204px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    min-height: 670px;
+
+    background-image: url(/img/bg/iphone-desktop.png),
+      linear-gradient(to bottom, $corn-silk 430px, $yellow 430px, $yellow);
+    background-repeat: no-repeat;
+    background-position: calc(50% - 480px) 140px, 0 0;
+    background-size: 509px 791px, auto;
+
+    &::after {
+      bottom: -204px;
+
+      height: 204px;
+    }
+  }
+}
+
+.instagram__wrapper {
+  @media (min-width: $laptop-width) {
+    position: relative;
+
+    max-width: 100%;
+    min-height: 670px;
+
+    overflow: hidden;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-height: 920px;
+  }
+}
+
+.instagram__title {
+  position: relative;
+
+  display: block;
+  margin-bottom: 140px;
+
+  &::after {
+    position: absolute;
+    bottom: -60px;
+    left: 0;
+
+    display: block;
+    width: 40px;
+    height: 40px;
+
+    background-image: url(/icons/icon-instagram.svg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: contain;
+
+    content: "";
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 240px;
+
+    &::after {
+      bottom: -120px;
+
+      width: 81px;
+      height: 81px;
+    }
+  }
+
+  @media (min-width: $laptop-width) {
+    margin-bottom: 40px;
+
+    line-height: 61px;
+    text-align-last: left;
+
+    &::after {
+      position: static;
+
+      display: inline-block;
+      width: 60px;
+      height: 60px;
+      margin-left: 30px;
+
+      vertical-align: middle;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 70px;
+  }
+}
+
+.instagram__list {
+  @include list-reset;
+
+  display: flex;
+  justify-content: space-between;
+  width: 340px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+
+  @media (min-width: $tablet-width) {
+    width: 700px;
+    margin-bottom: 50px;
+  }
+
+  @media (min-width: $laptop-width) {
+    position: absolute;
+    left: calc(50% - 90px);
+
+    flex-wrap: wrap;
+    row-gap: 15px;
+    width: 883px;
+  }
+
+  @media (min-width: $desktop-width) {
+    left: calc(50% - 130px);
+
+    width: 1240px;
+  }
+}
+
+.instagram__item {
+  width: 160px;
+  height: 183px;
+
+  background-color: $white;
+  border-radius: 10px;
+
+  &:nth-child(n + 3) {
+    display: none;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 340px;
+    height: 389px;
+  }
+
+  @media (min-width: $laptop-width) {
+    width: 280px;
+    height: 270px;
+
+    background-color: $c-e9;
+
+    &:nth-child(n + 3) {
+      display: block;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 400px;
+    height: 382px;
+  }
+}
+
+.instagram__controls {
+  position: relative;
+}
+
+.instagram__control {
+  display: block;
+  width: 40px;
+  height: 40px;
+  margin: 0;
+  padding: 0;
+
+  color: $yellow;
+
+  background-color: $white;
+  border: none;
+  border-radius: 50%;
+
+  &--next {
+    display: none;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 81px;
+    height: 81px;
+
+    font-size: 28px;
+    line-height: 28px;
+  }
+
+  @media (min-width: $laptop-width) {
+    position: absolute;
+    top: 252px;
+    right: 0;
+
+    width: 49px;
+    height: 49px;
+
+    font-size: 18px;
+    line-height: 18px;
+
+    &--prev {
+      display: none;
+    }
+
+    &--next {
+      display: block;
+    }
+
+    &:active {
+      opacity: 0.7;
+    }
+
+    &:hover {
+      color: $white;
+
+      background-color: $yellow-dark;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    top: 355px;
+
+    width: 70px;
+    height: 70px;
+
+    font-size: 26px;
+    line-height: 26px;
+  }
+
+  &:active {
+    color: $white;
+
+    background-color: $yellow-dark;
+  }
+}

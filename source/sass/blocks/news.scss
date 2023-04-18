@@ -27,11 +27,11 @@
   flex-direction: column;
   min-height: 700px;
   padding-top: 70px;
-  padding-bottom: 24px;
+  padding-bottom: 10px;
 
   @media (min-width: $tablet-width) {
     padding-top: 80px;
-    padding-bottom: 50px;
+    padding-bottom: 15px;
   }
 
   @media (min-width: $laptop-width) {
