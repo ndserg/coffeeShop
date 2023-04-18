@@ -35,7 +35,7 @@
 
       <ul class="header-main__user-menu user-menu">
         <li class="user-menu__item user-menu__search">
-          <label class="user-menu__search-label" for="search" aria-label="Поиск">
+          <label class="user-menu__search-label" for="search" tabindex="0" aria-label="Поиск">
             <svg class="user-menu__icon" width="17" height="17">
               <use xlink:href="icons/sprite.svg#icon-search"></use>
             </svg>
@@ -309,7 +309,7 @@
             </li>
           </ul>
           <p class="sales__price" data-old_price="250">350 &#8381;</p>
-          <a class="sales__item-link button button-small" href="#">В корзину</a>
+          <a class="sales__item-link button button--small" href="#">В корзину</a>
         </li>
 
         <li class="sales__item">
@@ -360,7 +360,7 @@
             </li>
           </ul>
           <p class="sales__price" data-old_price="250">350 &#8381;</p>
-          <a class="sales__item-link button button-small" href="#">В корзину</a>
+          <a class="sales__item-link button button--small" href="#">В корзину</a>
         </li>
       </ul>
 
@@ -539,6 +539,23 @@
           <button class="instagram__control instagram__control--prev" type="button">&#8592;</button>
           <button class="instagram__control instagram__control--next" type="button">&#8594;</button>
         </div>
+      </div>
+    </section>
+
+    <section class="page-main__subscription subscription">
+      <div class="subscription__wrapper container">
+        <h2 class="subscription__title">Подписка на новости и рассылку</h2>
+
+        <p class="subscription__info">Подпишитесь на нашу рассылку прямо сейчас и будьте в курсе новых поставок, скидок и эксклюзивных предложений.</p>
+
+        <form class="subscription__form" action="#" method="post">
+          <input class="subscription__email" type="email" placeholder="Ваш email" required>
+          <button class="subscription__button button button--medium" type="submit">Подписаться</button>
+        </form>
+
+        <p class="subscription__agreement">Нажимая на кнопку “Подписаться”, вы принимаете правила
+          <a href="#" class="subscription__agreement-link">пользовательского соглашения</a>
+        </p>
       </div>
     </section>
   </main>
