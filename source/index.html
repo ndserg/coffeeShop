@@ -6,6 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Интернет магазин Кофе Milor</title>
   <link rel="stylesheet" href="css/style.min.css">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="favicon-16x16.png" type="image/png">
+  <link rel="icon" href="favicon-32x32.png" type="image/png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" type="image/png">
+  <link rel="manifest" href="manifest.webmanifest">
 </head>
 
 <body class="page-main">
@@ -375,23 +380,35 @@
         <h2 class="benefits__title">Почему стоит работать именно с нами?</h2>
 
         <ul class="benefits__list">
-          <li class="benefits__list-item benefits__list-item--cup">
+          <li class="benefits__list-item">
             <h3 class="benefits__item-title">Всегда свежая обжарка</h3>
 
             <p class="benefits__item-description">Подбор степени обжарки под каждый сорт кофе. Всегда свежая обжарка</p>
+
+            <svg class="benefits__item-icon" width="16" height="16">
+              <use xlink:href="icons/sprite.svg#flat-cup"></use>
+            </svg>
           </li>
 
-          <li class="benefits__list-item benefits__list-item--price">
+          <li class="benefits__list-item">
             <h3 class="benefits__item-title">Лучшие цены на продукцию</h3>
 
             <p class="benefits__item-description">Благодаря крупным объемам производства мы даем лучшие цены на нашу продукцию</p>
+
+            <svg class="benefits__item-icon" width="16" height="16">
+              <use xlink:href="icons/sprite.svg#flat-price"></use>
+            </svg>
           </li>
 
-          <li class="benefits__list-item benefits__list-item--consult">
+          <li class="benefits__list-item">
             <h3 class="benefits__item-title">Консультации 24/7</h3>
 
             <p class="benefits__item-description">Наши специалисты готовы всегда помочь
               и подсказать вам с выбором кофе или другой продукции.</p>
+
+              <svg class="benefits__item-icon" width="16" height="16">
+                <use xlink:href="icons/sprite.svg#flat-consult"></use>
+              </svg>
           </li>
         </ul>
       </div>
@@ -524,7 +541,12 @@
 
     <section class="page-main__instagram instagram">
       <div class="instagram__wrapper">
-        <h2 class="instagram__title container">Мы в Instagram</h2>
+        <h2 class="instagram__title container">
+          Мы в Instagram
+          <svg class="instagram__title__icon" width="40" height="40">
+            <use xlink:href="icons/sprite.svg#icon-instagram"></use>
+          </svg>
+        </h2>
 
         <ul class="instagram__list">
           <li class="instagram__item"></li>

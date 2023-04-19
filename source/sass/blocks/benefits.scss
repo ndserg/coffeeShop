@@ -75,31 +75,9 @@
     height: 40px;
 
     background-color: $yellow;
-    background-repeat: no-repeat;
-    background-position: 55% 50%;
-    background-size: 15px 15px;
     border-radius: 50%;
 
     content: "";
-  }
-
-  &--cup {
-    &::before {
-      background-image: url(/icons/flat-cup.svg);
-    }
-  }
-
-  &--price {
-    &::before {
-      background-image: url(/icons/flat-price.svg);
-    }
-  }
-
-  &--consult {
-    &::before {
-      background-image: url(/icons/flat-consult.svg);
-      background-size: 17px 15px;
-    }
   }
 
   @media (min-width: $tablet-width) {
@@ -110,14 +88,6 @@
     &::before {
       width: 81px;
       height: 81px;
-
-      background-size: 30px 30px;
-    }
-
-    &--consult {
-      &::before {
-        background-size: 36px 30px;
-      }
     }
   }
 
@@ -129,14 +99,6 @@
     &::before {
       width: 60px;
       height: 60px;
-
-      background-size: 22px 22px;
-    }
-
-    &--consult {
-      &::before {
-        background-size: 26px 22px;
-      }
     }
   }
 
@@ -148,15 +110,40 @@
     &::before {
       width: 84px;
       height: 84px;
-
-      background-size: 32px 32px;
     }
+  }
+}
 
-    &--consult {
-      &::before {
-        background-size: 36px 30px;
-      }
-    }
+.benefits__item-icon {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+
+  width: 16px;
+  height: 16px;
+
+  @media (min-width: $tablet-width) {
+    top: 23px;
+    left: 23px;
+
+    width: 35px;
+    height: 35px;
+  }
+
+  @media (min-width: $laptop-width) {
+    top: 17px;
+    left: 17px;
+
+    width: 26px;
+    height: 26px;
+  }
+
+  @media (min-width: $desktop-width) {
+    top:26px;
+    left: 26px;
+
+    width: 32px;
+    height: 32px;
   }
 }
 

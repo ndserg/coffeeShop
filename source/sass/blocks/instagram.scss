@@ -101,54 +101,51 @@
   display: block;
   margin-bottom: 140px;
 
-  &::after {
-    position: absolute;
-    bottom: -60px;
-    left: 0;
-
-    display: block;
-    width: 40px;
-    height: 40px;
-
-    background-image: url(/icons/icon-instagram.svg);
-    background-repeat: no-repeat;
-    background-position: 0 0;
-    background-size: contain;
-
-    content: "";
-  }
-
   @media (min-width: $tablet-width) {
     margin-bottom: 240px;
-
-    &::after {
-      bottom: -120px;
-
-      width: 81px;
-      height: 81px;
-    }
   }
 
   @media (min-width: $laptop-width) {
+    display: flex;
+    align-items: center;
     margin-bottom: 40px;
 
-    line-height: 61px;
+    line-height: 60px;
     text-align-last: left;
-
-    &::after {
-      position: static;
-
-      display: inline-block;
-      width: 60px;
-      height: 60px;
-      margin-left: 30px;
-
-      vertical-align: middle;
-    }
   }
 
   @media (min-width: $desktop-width) {
     margin-bottom: 70px;
+  }
+}
+
+.instagram__title__icon {
+  position: absolute;
+  bottom: -60px;
+  left: 0;
+
+  width: 40px;
+  height: 40px;
+
+  @media (min-width: $tablet-width) {
+    bottom: -120px;
+
+    width: 81px;
+    height: 81px;
+  }
+
+  @media (min-width: $laptop-width) {
+    position: static;
+
+    width: 60px;
+    height: 60px;
+    margin-left: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 86px;
+    height: 86px;
+    margin-left: 54px;
   }
 }
 
