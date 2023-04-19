@@ -2,52 +2,59 @@
   position: relative;
 
   min-height: 395px;
-  padding-bottom: 26px;
+  padding-bottom: 13px;
 
-  background-image: url(/img/bg/iphone-mobile.png),
-    url(/img/bg/ellipse-bg.svg),
-    linear-gradient(to bottom, $corn-silk 210px, $yellow 210px, $yellow);
+  background-image: url(/img/bg/ellipse-bg.svg),
+    linear-gradient(to bottom, $corn-silk 190px, $yellow 190px, $yellow);
   background-repeat: no-repeat;
-  background-position: calc(50% + 120px) 50px, 50% 120px, 0 0;
-  background-size: 200px 395px, 130%, auto;
+  background-position: 50% 80px, 0 0;
+  background-size: 130%, auto;
 
-  &::after {
-    position: absolute;
-    bottom: -94px;
-    z-index: -1;
+  @media (max-width: $laptop-width) {
+    &::after {
+      position: absolute;
+      top: 90px;
+      left: calc(50% + 40px);
 
-    display: block;
-    width: 100%;
-    height: 94px;
+      display: block;
+      width: 400px;
+      height: 790px;
 
-    background-image: url(/img/bg/yellow-bottom-bg.svg);
-    background-repeat: no-repeat;
-    background-position: 50% 0;
-    background-size: 100%;
+      background-image: url(/img/bg/iphone-tablet.png);
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      background-size: 100%;
 
-    content: "";
+      content: "";
+    }
+  }
+
+  @media (max-width: $tablet-width) {
+    &::after {
+      top: 50px;
+      left: calc(50% + 40px);
+
+      width: 200px;
+      height: 395px;
+
+      background-image: url(/img/bg/iphone-mobile.png);
+    }
   }
 
   @media (min-width: $tablet-width) {
-    min-height: 880px;
+    min-height: 800px;
     padding-top: 30px;
 
-    background-image: url(/img/bg/iphone-tablet.png),
-      url(/img/bg/ellipse-bg.svg),
+    background-image: url(/img/bg/ellipse-bg.svg),
       linear-gradient(to bottom, $corn-silk 300px, $yellow 300px, $yellow);
     background-repeat: no-repeat;
-    background-position: calc(50% + 250px) 90px, 50% 210px, 0 0;
-    background-size: 400px 790px, 130%, auto;
-
-    &::after {
-      bottom: -152px;
-
-      height: 152px;
-    }
+    background-position: 50% 210px, 0 0;
+    background-size: 130%, auto;
   }
 
   @media (min-width: $laptop-width) {
     min-height: 670px;
+    padding-bottom: 30px;
 
     background-image: url(/img/bg/iphone-laptop.png),
       url(/img/bg/ellipse-bg.svg),
@@ -55,12 +62,6 @@
     background-repeat: no-repeat;
     background-position: calc(50% - 380px) 120px, 50% 180px, 0 0;
     background-size: 361px 561px, 130%, auto;
-
-    &::after {
-      bottom: -204px;
-
-      height: 204px;
-    }
   }
 
   @media (min-width: $desktop-width) {
@@ -71,12 +72,6 @@
     background-repeat: no-repeat;
     background-position: calc(50% - 480px) 140px, 0 0;
     background-size: 509px 791px, auto;
-
-    &::after {
-      bottom: -288px;
-
-      height: 288px;
-    }
   }
 }
 
@@ -99,10 +94,10 @@
   position: relative;
 
   display: block;
-  margin-bottom: 140px;
+  margin-bottom: 100px;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 240px;
+    margin-bottom: 212px;
   }
 
   @media (min-width: $laptop-width) {
@@ -121,7 +116,7 @@
 
 .instagram__title__icon {
   position: absolute;
-  bottom: -60px;
+  bottom: -48px;
   left: 0;
 
   width: 40px;
@@ -152,20 +147,24 @@
 .instagram__list {
   @include list-reset;
 
+  position: relative;
+  z-index: 2;
+
   display: flex;
   justify-content: space-between;
   width: 340px;
   margin: 0 auto;
-  margin-bottom: 30px;
+  margin-bottom: 22px;
 
   @media (min-width: $tablet-width) {
     width: 700px;
-    margin-bottom: 50px;
+    margin-bottom: 32px;
   }
 
   @media (min-width: $laptop-width) {
     position: absolute;
     left: calc(50% - 90px);
+    z-index: 0;
 
     flex-wrap: wrap;
     row-gap: 15px;

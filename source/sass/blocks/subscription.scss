@@ -1,32 +1,40 @@
 .subscription {
+  background-image: url(/img/bg/yellow-top-bg.svg);
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-size: 100%;
+
   @media (min-width: $laptop-width) {
     padding-bottom: 60px;
 
-    background-image: url(/img/cup-coffee-644x456.png);
+    background-image: url(/img/cup-coffee-644x456.png),
+      url(/img/bg/yellow-top-bg.svg);
     background-repeat: no-repeat;
-    background-position: calc(50% + 440px) 0;
-    background-size: auto;
+    background-position: calc(50% + 440px) 0, 50% 0;
+    background-size: auto, 100%;
   }
 
   @media (min-width: $desktop-width) {
-    background-image: url(/img/cup-coffee-916x773.png);
-    background-position: calc(50% + 630px) -45px;
-    background-size: 802px;
+    background-image: url(/img/cup-coffee-916x773.png),
+      url(/img/bg/yellow-top-bg.svg);
+    background-position: calc(50% + 630px) -45px, 50% 0;
+    background-size: 802px, 100%;
   }
 }
 
 .subscription__wrapper {
-  padding-top: 280px;
+  padding-top: 320px;
 
   background-image: url(/img/cup-coffee-397x281.png);
   background-repeat: no-repeat;
-  background-position: 0 0;
+  background-position: 0 40px;
   background-size: contain;
 
   @media (min-width: $tablet-width) {
-    padding-top: 560px;
+    padding-top: 620px;
 
     background-image: url(/img/cup-coffee-644x456.png);
+    background-position: 0 70px;
   }
 
   @media (min-width: $laptop-width) {
