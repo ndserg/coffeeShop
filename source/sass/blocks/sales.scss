@@ -1,7 +1,5 @@
 .sales {
   position: relative;
-
-  text-align: right;
 }
 
 .sales__title {
@@ -76,7 +74,7 @@
   @media (min-width: $laptop-width) {
     width: 870px;
     margin-right: 88px;
-    margin-bottom: 58px;
+    margin-bottom: 15px;
     margin-left: auto;
     padding-top: 0;
     padding-left: 0;
@@ -723,15 +721,17 @@
   display: none;
 
   @media (min-width: $laptop-width) {
+    position: absolute;
+    right: 58px;
+
     display: inline-block;
-    margin-right: 58px;
 
     font-size: 14px;
     line-height: 16px;
   }
 
   @media (min-width: $desktop-width) {
-    margin-right: 110px;
+    right: 110px;
 
     font-size: 20px;
     line-height: 24px;

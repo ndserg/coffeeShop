@@ -23,6 +23,7 @@
     display: grid;
     grid-auto-rows: auto;
     grid-template-columns: repeat(4, 1fr);
+    align-items: normal;
     justify-content: space-between;
 
     padding: 0;
@@ -48,13 +49,6 @@
   padding-bottom: 30px;
   padding-left: 20px;
 
-  @media (min-width: $laptop-width) {
-    padding-top: 42px;
-    padding-right: 23px;
-    padding-bottom: 46px;
-    padding-left: 23px;
-  }
-
   @media (min-width: $tablet-width) {
     padding-top: 15px;
     padding-right: 40px;
@@ -62,8 +56,15 @@
     padding-left: 40px;
   }
 
+  @media (min-width: $laptop-width) {
+    padding-top: 12px;
+    padding-right: 23px;
+    padding-bottom: 46px;
+    padding-left: 23px;
+  }
+
   @media (min-width: $desktop-width) {
-    padding-top: 60px;
+    padding-top: 23px;
     padding-right: 36px;
     padding-bottom: 65px;
     padding-left: 36px;
@@ -77,9 +78,11 @@
 }
 
 .main-catalog__item {
+  position: relative;
+
   flex-shrink: 0;
   width: 194px;
-  height: 350px;
+  min-height: 350px;
   margin-right: 20px;
 
   background-color: $white;
@@ -99,7 +102,7 @@
 
   @media (min-width: $tablet-width) {
     width: 368px;
-    height: 388px;
+    min-height: 388px;
 
     border-radius: 12px;
 
@@ -112,11 +115,9 @@
   }
 
   @media (min-width: $laptop-width) {
-    position: relative;
-
     display: block;
     width: 280px;
-    height: 381px;
+    min-height: 381px;
 
     border-radius: 14px;
 
@@ -130,13 +131,9 @@
 
     &:hover {
       .main-catalog__item-wrapper {
-        position: absolute;
+        padding-bottom: 4px;
 
-        top: -75px;
-      }
-
-      .main-catalog__item-title {
-        margin-bottom: 35px;
+        transform: translateY(-75px);
       }
 
       .main-catalog__link {
@@ -147,19 +144,15 @@
 
   @media (min-width: $desktop-width) {
     width: 400px;
-    height: 540px;
+    min-height: 540px;
 
     border-radius: 10px;
 
     &:hover {
       .main-catalog__item-wrapper {
-        position: absolute;
+        padding-bottom: 5px;
 
-        top: -150px;
-      }
-
-      .main-catalog__item-title {
-        margin-bottom: 50px;
+        transform: translateY(-130px);
       }
 
       .main-catalog__link {
@@ -178,10 +171,13 @@
 
   @media (min-width: $laptop-width) {
     width: 212px;
+    margin-top: 0;
+    margin-bottom: 35px;
   }
 
   @media (min-width: $desktop-width) {
     width: 284px;
+    margin-bottom: 50px;
   }
 }
 
@@ -198,11 +194,14 @@
   }
 
   @media (min-width: $laptop-width) {
+    width: 204px;
+    height: 196px;
     margin-bottom: 45px;
+
+    line-height: 196px;
   }
 
   @media (min-width: $desktop-width) {
-
     width: 328px;
     height: 280px;
     margin-bottom: 50px;
@@ -212,6 +211,8 @@
 }
 
 .main-catalog__img {
+  max-height: 100%;
+
   vertical-align: middle;
 }
 

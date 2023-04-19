@@ -1,35 +1,24 @@
 .sait-nav__list {
   @include list-reset;
 
-  @media (min-width: $laptop-width) {
-    display: flex;
-  }
-}
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 
-.sait-nav__item {
-  margin-bottom: 20px;
+  column-gap: 30px;
 
-  @media (min-width: $laptop-width) {
-    margin-right: 60px;
-    margin-bottom: 0;
-  }
-
-  &:last-child {
-    margin-right: 0;
-    margin-bottom: 0;
+  @media (min-width: $tablet-width) {
+    column-gap: 60px;
   }
 }
 
 .sait-nav__link {
   display: block;
-  padding-top: 15px;
-  padding-bottom: 15px;
-
 
   color: $c-18;
   font-weight: 500;
-  font-size: 16px;
-  line-height: 20px;
+  font-size: 12px;
+  line-height: 14px;
   text-decoration: none;
 
   &--current {
@@ -37,8 +26,8 @@
   }
 
   @media (min-width: $tablet-width) {
-    font-size: 32px;
-    line-height: 38px;
+    font-size: 24px;
+    line-height: 30px;
   }
 
   @media (min-width: $laptop-width) {
