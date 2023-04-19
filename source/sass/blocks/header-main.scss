@@ -54,10 +54,35 @@
 }
 
 .header-main__nav {
-  display: none;
+  @media (max-width: $tablet-width) {
+    .header-main__nav-link {
+      padding-top: 15px;
+      padding-bottom: 15px;
 
-  @media (min-width: $laptop-width) {
-    display: block;
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+
+  @media (max-width: $laptop-width) {
+    display: none;
+
+    .header-main__nav-list {
+      display: block;
+    }
+
+    .header-main__nav-item {
+      margin-bottom: 20px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    .header-main__nav-link {
+      font-size: 32px;
+      line-height: 38px;
+    }
   }
 }
 
@@ -74,47 +99,49 @@
 }
 
 .header-main--open {
-  min-height: 100vh;
+  @media (max-width: $laptop-width) {
+    min-height: 100vh;
 
-  .header-main__wrapper {
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    height: auto;
-    padding-bottom: 50px;
-  }
-
-  .header-main__menu-button {
-    margin-right: 0;
-  }
-
-  .header-main__logo {
-    order: -1;
-  }
-
-  .header-main__nav {
-    display: block;
-    width: 100%;
-    margin-top: 60px;
-    margin-bottom: 25px;
-
-    @media (min-width: $tablet-width) {
-      margin-top: 155px;
-      margin-bottom: 65px;
+    .header-main__wrapper {
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      height: auto;
+      padding-bottom: 50px;
     }
-  }
 
-  .header-main__user-menu {
-    width: 100%;
-    margin-bottom: 170px;
-    margin-left: 0;
-  }
+    .header-main__menu-button {
+      margin-right: 0;
+    }
 
-  .user-menu__search {
-    display: none;
-  }
+    .header-main__logo {
+      order: -1;
+    }
 
-  .header-main__contacts {
-    display: block;
-    margin: 0 auto;
+    .header-main__nav {
+      display: block;
+      width: 100%;
+      margin-top: 60px;
+      margin-bottom: 25px;
+
+      @media (min-width: $tablet-width) {
+        margin-top: 155px;
+        margin-bottom: 65px;
+      }
+    }
+
+    .header-main__user-menu {
+      width: 100%;
+      margin-bottom: 170px;
+      margin-left: 0;
+    }
+
+    .user-menu__search {
+      display: none;
+    }
+
+    .header-main__contacts {
+      display: block;
+      margin: 0 auto;
+    }
   }
 }
