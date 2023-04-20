@@ -4,15 +4,11 @@
   box-shadow: 0px 4px 14px rgba($c-9d, 25%);
 
   @media (min-width: $laptop-width) {
-    background-color: transparent;
+    &--transparent {
+      background-color: transparent;
 
-    box-shadow: none;
-  }
-
-  &--active {
-    background-color: $white;
-
-    box-shadow: 0px 4px 14px rgba($c-9d, 25%);
+      box-shadow: none;
+    }
   }
 }
 

@@ -1,0 +1,85 @@
+.page-catalog {
+  background-color: $c-f5;
+}
+
+.page-catalog__main {
+  background-image: url(/img/bg/yellow-top-bg.svg),
+    linear-gradient(to bottom, $yellow 230px, transparent 230px, transparent);
+  background-repeat: no-repeat;
+  background-position: 50% 230px, 0 0;
+  background-size: 100%, auto;
+
+  @media (min-width: $tablet-width) {
+    background-image: url(/img/bg/yellow-top-bg.svg),
+      linear-gradient(to bottom, $yellow 472px, transparent 472px, transparent);
+    background-position: 50% 472px, 0 0;
+  }
+
+  @media (min-width: $laptop-width) {
+    background-image: url(/img/bg/yellow-top-bg.svg),
+      linear-gradient(to bottom, $yellow 328px, transparent 328px, transparent);
+    background-position: 50% 328px, 0 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    background-image: url(/img/bg/yellow-top-bg.svg),
+      linear-gradient(to bottom, $yellow 464px, transparent 464px, transparent);
+    background-position: 50% 464px, 0 0;
+  }
+}
+
+.page-catalog__wrapper {
+  display: flex;
+  flex-direction: column;
+  padding-top: 30px;
+
+  background-image: url(/img/cup-coffee-397x281.png);
+  background-repeat: no-repeat;
+  background-position: 50% 130px;
+  background-size: 340px auto;
+
+  @media (min-width: $tablet-width) {
+    background-image: url(/img/cup-coffee-644x456.png);
+    background-position: 50% 266px;
+    background-size: auto;
+  }
+
+  @media (min-width: $laptop-width) {
+    background-position: 100% 0;
+  }
+}
+
+.page-catalog__title {
+  margin-bottom: 265px;
+
+  color: $white;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 510px;
+  }
+
+  @media (min-width: $laptop-width) {
+    margin-bottom: 95px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 146px;
+  }
+}
+
+.page-catalog__breadcrumbs {
+  order: -1;
+  margin-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 70px;
+  }
+
+  @media (min-width: $laptop-width) {
+    margin-bottom: 100px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 130px;
+  }
+}
