@@ -1,4 +1,5 @@
 'use strict';
+const body = document.querySelector('body');
 const headerMain = document.querySelector('.header-main');
 const userMenu = headerMain.querySelector('.user-menu');
 const searchContainer = userMenu.querySelector('.user-menu__search');
@@ -10,10 +11,17 @@ const searchButtonClose = searchWindow.querySelector('.search-box__button-close'
 
 const KEYCODE_ESC = 27;
 
-const headerActiveClass = 'header-main--active';
+const mainPageClass = 'page-main';
+const headerTransparencyClass = 'header-main--transparent';
 const searchContainerActiveClass = 'user-menu__item--current'
 const searchWindowOpenClass = 'user-menu__search-box--open';
 const searchResultsOpenClass = 'search-box__list--open';
+
+const isMainPage = body.classList.contains(mainPageClass);
+
+if (isMainPage) {
+  headerMain.classList.add(headerTransparencyClass);
+}
 
 const searchInputHandler = (evt) => {
   if (evt.target.value.length > 0 && !searchResults.classList.contains(searchResultsOpenClass)) {
@@ -24,7 +32,7 @@ const searchInputHandler = (evt) => {
 };
 
 const closeSearch = () => {
-  headerMain.classList.remove(headerActiveClass);
+  isMainPage ? headerMain.classList.add(headerTransparencyClass) : '';
   searchContainer.classList.remove(searchContainerActiveClass);
   searchWindow.classList.remove(searchWindowOpenClass);
 
@@ -51,7 +59,7 @@ const searchCloseKeyHandler = (evt) => {
 const searchOpenHandler = (evt) => {
   evt.preventDefault();
 
-  headerMain.classList.add(headerActiveClass);
+  isMainPage ? headerMain.classList.remove(headerTransparencyClass) : '';
   searchContainer.classList.add(searchContainerActiveClass);
   searchWindow.classList.add(searchWindowOpenClass);
 
