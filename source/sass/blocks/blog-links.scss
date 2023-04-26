@@ -1,0 +1,150 @@
+.blog-links {
+  @include list-reset;
+
+  display: grid;
+  grid-auto-rows: min-content;
+  grid-template-columns: repeat(3, 106px);
+  justify-content: space-between;
+  row-gap: 10px;
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: repeat(3, 220px);
+    row-gap: 20px;
+  }
+
+  @media (min-width: $laptop-width) {
+    grid-template-columns: repeat(8, 134px);
+    row-gap: 15px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: repeat(8, 189px);
+    row-gap: 20px;
+  }
+}
+
+.blog-links__item {
+  padding: 10px;
+
+  background-color: $white;
+
+  border-radius: 10px;
+  box-shadow: 0px 0px 30px rgba($c-95, 25%);
+
+  @media (min-width: $tablet-width) {
+    padding: 20px;
+
+    border-radius: 20px;
+
+    box-shadow: 0px 0px 60px rgba($c-95, 25%);
+  }
+
+  @media (min-width: $laptop-width) {
+    border-radius: 14px;
+
+    box-shadow: 0px 0px 22px rgba($c-95, 25%);
+  }
+
+  @media (min-width: $desktop-width) {
+    border-radius: 20px;
+
+    box-shadow: 0px 0px 30px rgba($c-95, 25%);
+  }
+}
+
+
+.blog-links__link {
+  display: block;
+
+  color: $black;
+  text-decoration: none;
+
+  cursor: pointer;
+
+  svg {
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+
+    color: $c-50;
+
+    vertical-align: middle;
+  }
+
+  &:active {
+    color: $yellow-dark;
+
+    opacity: 0.6;
+
+    svg {
+      color: $yellow-dark;
+    }
+  }
+
+  &:hover {
+    color: $yellow;
+
+    svg {
+      color: $yellow;
+    }
+  }
+}
+
+.blog-links__title {
+  display: block;
+  margin-bottom: 10px;
+
+  font-size: 12px;
+  line-height: 14px;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 15px;
+
+    font-size: 24px;
+    line-height: 28px;
+  }
+
+  @media (min-width: $laptop-width) {
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 20px;
+
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+
+.blog-links__icon {
+  display: block;
+  width: 68px;
+  height: 68px;
+  margin: 0 auto;
+
+  line-height: 68px;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    width: 136px;
+    height: 136px;
+
+    line-height: 136px;
+  }
+
+  @media (min-width: $laptop-width) {
+    width: 68px;
+    height: 68px;
+
+    line-height: 68px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 84px;
+    height: 84px;
+
+    line-height: 84px;
+  }
+}
