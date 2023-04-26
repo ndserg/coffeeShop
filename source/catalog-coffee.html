@@ -140,28 +140,146 @@
         </ul>
       </nav>
 
-      <section class="page-main__filters">
+      <section class="page-catalog__filters">
         <h2 class="visually-hidden">Фильтры каталога кофе</h2>
 
         <form class="filters" action="#" method="post">
-          <fieldset>
-            <legend>Степень обжарки</legend>
+          <div class="filters__wrapper filters__wrapper--vertical">
+            <fieldset class="filters__set">
+              <legend class="filters__title filters__title--big">Степень обжарки</legend>
 
-            <label for="roast-5">Степень обжарки - 5</label>
-            <input type="radio" name="roast" id="roast-5">
+              <input class="filters__input-radio" type="radio" name="roast" id="roast-5" checked>
+              <label class="filters__label filters__label--icon" for="roast-5">
+                Степень обжарки - 5
+                <span class="filters__icon-coffee">
+                  <span style="width: 100%"></span>
+                </span>
+              </label>
 
-            <label for="roast-4">Степень обжарки - 5</label>
-            <input type="radio" name="roast" id="roast-4">
+              <input class="filters__input-radio" type="radio" name="roast" id="roast-4">
+              <label class="filters__label filters__label--icon" for="roast-4">
+                Степень обжарки - 4
+                <span class="filters__icon-coffee">
+                  <span style="width: 80%"></span>
+                </span>
+              </label>
 
-            <label for="roast-3">Степень обжарки - 5</label>
-            <input type="radio" name="roast" id="roast-3">
+              <input class="filters__input-radio" type="radio" name="roast" id="roast-3">
+              <label class="filters__label filters__label--icon" for="roast-3">
+                Степень обжарки - 3
+                <span class="filters__icon-coffee">
+                  <span class="filters__icon-coffee" style="width: 58%"></span>
+                </span>
+              </label>
 
-            <label for="roast-2">Степень обжарки - 5</label>
-            <input type="radio" name="roast" id="roast-2">
+              <input class="filters__input-radio" type="radio" name="roast" id="roast-2">
+              <label class="filters__label filters__label--icon" for="roast-2">
+                Степень обжарки - 2
+                <span class="filters__icon-coffee">
+                  <span class="filters__icon-coffee" style="width: 38%"></span>
+                </span>
+              </label>
 
-            <label for="roast-1">Степень обжарки - 5</label>
-            <input type="radio" name="roast" id="roast-1">
-          </fieldset>
+              <input class="filters__input-radio" type="radio" name="roast" id="roast-1">
+              <label class="filters__label filters__label--icon" for="roast-1">
+                Степень обжарки - 1
+                <span class="filters__icon-coffee">
+                  <span class="filters__icon-coffee" style="width: 16%"></span>
+                </span>
+              </label>
+            </fieldset>
+          </div>
+
+          <div class="filters__wrapper filters__wrapper--multi">
+            <fieldset class="filters__set">
+              <legend class="filters__title">География</legend>
+
+              <input class="filters__input-radio" type="radio" name="location" id="Africa">
+              <label class="filters__label" for="Africa">Африка</label>
+
+              <input class="filters__input-radio" type="radio" name="location" id="Yemen">
+              <label class="filters__label" for="Yemen">Йемен</label>
+
+              <input class="filters__input-radio" type="radio" name="location" id="Uganda">
+              <label class="filters__label" for="Uganda">Уганда</label>
+
+              <input class="filters__input-radio" type="radio" name="location" id="Asia">
+              <label class="filters__label" for="Asia">Азия</label>
+
+              <input class="filters__input-radio" type="radio" name="location" id="CentAmerica">
+              <label class="filters__label" for="CentAmerica">Центр. Америка</label>
+
+              <input class="filters__input-radio" type="radio" name="location" id="LatAmerica">
+              <label class="filters__label" for="LatAmerica">Лат. Америка</label>
+            </fieldset>
+
+            <fieldset class="filters__set">
+              <legend class="filters__title">Кислинка</legend>
+
+              <input class="filters__input-radio" type="radio" name="acidity" id="low">
+              <label class="filters__label" for="low">Низкая</label>
+
+              <input class="filters__input-radio" type="radio" name="acidity" id="medium">
+              <label class="filters__label" for="medium">Средняя</label>
+
+              <input class="filters__input-radio" type="radio" name="acidity" id="high">
+              <label class="filters__label" for="high">Высокая</label>
+            </fieldset>
+
+            <fieldset class="filters__set">
+              <legend class="filters__title">Способ обработки</legend>
+
+              <input class="filters__input-radio" type="radio" name="roastMethod" id="dry">
+              <label class="filters__label" for="dry">Сухая</label>
+
+              <input class="filters__input-radio" type="radio" name="roastMethod" id="washed">
+              <label class="filters__label" for="washed">Мытая</label>
+
+              <input class="filters__input-radio" type="radio" name="roastMethod" id="allOthers">
+              <label class="filters__label" for="allOthers">Прочие</label>
+            </fieldset>
+
+            <fieldset class="filters__set">
+              <legend class="filters__title">Особые</legend>
+
+              <input class="filters__input-radio" type="radio" name="special" id="popular">
+              <label class="filters__label" for="popular">Популярное</label>
+
+              <input class="filters__input-radio" type="radio" name="special" id="newCrop">
+              <label class="filters__label" for="newCrop">Новый урожай</label>
+
+              <input class="filters__input-radio" type="radio" name="special" id="bestChoice">
+              <label class="filters__label" for="bestChoice">Ваш выбор</label>
+
+              <input class="filters__input-radio" type="radio" name="special" id="microLot">
+              <label class="filters__label" for="microLot">Микролот</label>
+
+              <input class="filters__input-radio" type="radio" name="special" id="sortOfWeek">
+              <label class="filters__label" for="sortOfWeek">Сорт недели</label>
+
+              <input class="filters__input-radio" type="radio" name="special" id="discounts">
+              <label class="filters__label" for="discounts">Скидки</label>
+
+              <input class="filters__input-radio" type="radio" name="special" id="newSorts">
+              <label class="filters__label" for="newSorts">Новинка</label>
+            </fieldset>
+
+            <fieldset class="filters__set">
+              <legend class="filters__title">Вид кофе</legend>
+
+              <input class="filters__input-radio" type="radio" name="coffeeType" id="arabica">
+              <label class="filters__label" for="arabica">Арабика</label>
+
+              <input class="filters__input-radio" type="radio" name="coffeeType" id="robusta">
+              <label class="filters__label" for="robusta">Робуста</label>
+
+              <input class="filters__input-radio" type="radio" name="coffeeType" id="arabicaBlend">
+              <label class="filters__label" for="arabicaBlend">Смесь арабик</label>
+
+              <input class="filters__input-radio" type="radio" name="coffeeType" id="arabicaRobustaBlend">
+              <label class="filters__label" for="arabicaRobustaBlend">Смесь арабика/ робуста</label>
+            </fieldset>
+          </div>
         </form>
       </section>
     </div>
