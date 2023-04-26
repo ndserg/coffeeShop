@@ -4,26 +4,26 @@
 
 .page-catalog__main {
   background-image: url(/img/bg/yellow-top-bg.svg),
-    linear-gradient(to bottom, $yellow 230px, transparent 230px, transparent);
+    linear-gradient(to bottom, $yellow 230px, $white 230px, $white 1520px, transparent 1520px, transparent);
   background-repeat: no-repeat;
   background-position: 50% 230px, 0 0;
   background-size: 100%, auto;
 
   @media (min-width: $tablet-width) {
     background-image: url(/img/bg/yellow-top-bg.svg),
-      linear-gradient(to bottom, $yellow 472px, transparent 472px, transparent);
+      linear-gradient(to bottom, $yellow 472px, $white 472px, $white 3180px, transparent 3180px, transparent);
     background-position: 50% 472px, 0 0;
   }
 
   @media (min-width: $laptop-width) {
     background-image: url(/img/bg/yellow-top-bg.svg),
-      linear-gradient(to bottom, $yellow 328px, transparent 328px, transparent);
+      linear-gradient(to bottom, $yellow 328px, $white 328px, $white 800px, transparent 800px, transparent);
     background-position: 50% 328px, 0 0;
   }
 
   @media (min-width: $desktop-width) {
     background-image: url(/img/bg/yellow-top-bg.svg),
-      linear-gradient(to bottom, $yellow 464px, transparent 464px, transparent);
+      linear-gradient(to bottom, $yellow 464px, $white 464px, $white 1100px, transparent 1100px, transparent);
     background-position: 50% 464px, 0 0;
   }
 }
@@ -81,5 +81,37 @@
 
   @media (min-width: $desktop-width) {
     margin-bottom: 130px;
+  }
+}
+
+.page-catalog__filters {
+  margin-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 40px;
+  }
+
+  @media (min-width: $laptop-width) {
+    margin-bottom: 15px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 20px;
+  }
+}
+
+.page-catalog__blog-links {
+  margin-bottom: 40px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 60px;
+  }
+
+  @media (min-width: $laptop-width) {
+    margin-bottom: 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 80px;
   }
 }
