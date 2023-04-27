@@ -6,36 +6,34 @@
   flex-wrap: wrap;
   justify-content: space-between;
 
-  &--mobile {
-    width: 250px;
-    padding-top: 14px;
-    padding-right: 24px;
-    padding-bottom: 30px;
-    padding-left: 24px;
-
-    border-radius: 12px;
-    box-shadow: 0px 0px 12px rgba($c-92, 25%);
-  }
+  width: 340px;
+  padding-top: 20px;
+  padding-right: 35px;
+  padding-bottom: 42px;
+  padding-left: 35px;
 
   background-color: $white;
 
+  border-radius: 16px;
+  box-shadow: 0px 0px 18px rgba($c-92, 25%);
+
   &--sales {
-    padding-top: 27px;
+    padding-top: 35px;
 
     &::before {
       position: absolute;
-      top: -22px;
+      top: -30px;
 
       display: block;
-      width: 44px;
-      height: 44px;
-      padding-top: 9px;
-      padding-bottom: 9px;
+      width: 60px;
+      height: 60px;
+      padding-top: 12px;
+      padding-bottom: 12px;
 
       color: $black;
       font-weight: 700;
-      font-size: 22px;
-      line-height: 26px;
+      font-size: 30px;
+      line-height: 36px;
       text-align: center;
 
       background-color: $yellow;
@@ -45,29 +43,151 @@
     }
   }
 
-  @media (min-width: $tablet-width) {
-    width: 340px;
-    padding-top: 20px;
-    padding-right: 35px;
-    padding-bottom: 42px;
-    padding-left: 35px;
+  @media (max-width: $tablet-width) {
+    &--mobile {
+      width: 250px;
+      padding-top: 14px;
+      padding-right: 24px;
+      padding-bottom: 30px;
+      padding-left: 24px;
 
-    border-radius: 16px;
-    box-shadow: 0px 0px 18px rgba($c-92, 25%);
+      border-radius: 12px;
+      box-shadow: 0px 0px 12px rgba($c-92, 25%);
 
-    &--sales {
-      padding-top: 35px;
+      .coffee-card__title {
+        margin-bottom: 7px;
+
+        font-weight: 900;
+        font-size: 16px;
+        line-height: 20px;
+      }
+
+      .coffee-card__description {
+        font-size: 10px;
+        line-height: 12px;
+      }
+
+      .coffee-card__promo {
+        font-size: 10px;
+        line-height: 12px;
+      }
+
+      .coffee-card__weight {
+        width: 82px;
+        padding-top: 4px;
+        padding-right: 10px;
+        padding-bottom: 4px;
+        padding-left: 17px;
+
+        font-size: 12px;
+        line-height: 14px;
+      }
+
+      .coffee-card__img-box {
+        width: 107px;
+        height: 193px;
+        margin-bottom: 23px;
+      }
+
+      .coffee-card__features {
+        width: 83px;
+        margin-bottom: 23px;
+        padding-top: 14px;
+      }
+
+      .coffee-card__feature {
+        margin-bottom: 10px;
+      }
+
+      .coffee-card__feature-name {
+        margin-bottom: 8px;
+
+        font-size: 10px;
+        line-height: 12px;
+      }
+
+      .coffee-card__link {
+        width: 112px;
+      }
+
+      .coffee-card__price {
+        font-size: 20px;
+        line-height: 26px;
+
+        &::before {
+          top: -15px;
+
+          font-size: 16px;
+          line-height: 20px;
+        }
+      }
+
+      .coffee-card__rewiews {
+        margin-bottom: 18px;
+      }
+
+      .coffee-card__rewiews-text {
+        font-size: 8px;
+        line-height: 10px;
+
+        & b {
+          font-size: 12px;
+          line-height: 14px;
+        }
+      }
+
+      .coffee-card__rating-stars {
+        height: 16px;
+
+        &::before,
+        & span::before {
+          background-size: auto 16px;
+        }
+      }
+
+      .coffee-card__strength {
+        height: 12px;
+        margin-bottom: 18px;
+
+        &::before,
+        & span::before {
+          background-size: auto 12px;
+        }
+      }
+
+      .coffee-card__rating-feature {
+        height: 6px;
+
+        &::before,
+        & span::before {
+          background-size: auto 6px;
+        }
+      }
+    }
+
+    &--mobile#{&}--sales {
+      padding-top: 27px;
 
       &::before {
-        top: -30px;
+        position: absolute;
+        top: -22px;
 
-        width: 60px;
-        height: 60px;
-        padding-top: 12px;
-        padding-bottom: 12px;
+        display: block;
+        width: 44px;
+        height: 44px;
+        padding-top: 9px;
+        padding-bottom: 9px;
 
-        font-size: 30px;
-        line-height: 36px;
+        color: $black;
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 26px;
+        text-align: center;
+
+        background-color: $yellow;
+        border-radius: 50%;
+
+        content: "%"
       }
     }
   }
@@ -124,29 +244,18 @@
       }
     }
   }
-
-  &:last-child {
-    margin-right: 0;
-  }
 }
 
 .coffee-card__title {
   order: 5;
 
   margin: 0;
-  margin-bottom: 7px;
+  margin-bottom: 10px;
 
   color: $black;
   font-weight: 900;
-  font-size: 16px;
-  line-height: 20px;
-
-  @media (min-width: $tablet-width) {
-    margin-bottom: 10px;
-
-    font-size: 22px;
-    line-height: 28px;
-  }
+  font-size: 22px;
+  line-height: 28px;
 
   @media (min-width: $laptop-width) {
     font-size: 18px;
@@ -166,13 +275,8 @@
   margin: 0;
   margin-bottom: 20px;
 
-  font-size: 10px;
-  line-height: 12px;
-
-  @media (min-width: $tablet-width) {
-    font-size: 16px;
-    line-height: 20px;
-  }
+  font-size: 16px;
+  line-height: 20px;
 
   @media (min-width: $laptop-width) {
     font-size: 12px;
@@ -195,13 +299,8 @@
 
   color: $yellow;
   font-weight: 700;
-  font-size: 10px;
-  line-height: 12px;
-
-  @media (min-width: $tablet-width) {
-    font-size: 14px;
-    line-height: 18px;
-  }
+  font-size: 14px;
+  line-height: 18px;
 
   @media (min-width: $laptop-width) {
     font-size: 12px;
@@ -217,31 +316,20 @@
 .coffee-card__weight {
   order: 2;
 
-  width: 82px;
+  width: 110px;
   margin-bottom: 25px;
-  padding-top: 4px;
-  padding-right: 10px;
-  padding-bottom: 4px;
-  padding-left: 17px;
+  padding-top: 6px;
+  padding-right: 20px;
+  padding-bottom: 6px;
+  padding-left: 20px;
 
   font-weight: 600;
-  font-size: 12px;
-  line-height: 14px;
+  font-size: 16px;
+  line-height: 20px;
 
   background-color: $corn-silk;
   border: 1px solid $yellow;
   border-radius: 3px;
-
-  @media (min-width: $tablet-width) {
-    width: 110px;
-    padding-top: 6px;
-    padding-right: 20px;
-    padding-bottom: 6px;
-    padding-left: 20px;
-
-    font-size: 16px;
-    line-height: 20px;
-  }
 
   @media (min-width: $laptop-width) {
     width: 93px;
@@ -269,16 +357,10 @@
 .coffee-card__img-box {
   order: 3;
 
-  width: 107px;
-  height: 193px;
+  width: 144px;
+  height: 260px;
   margin: 0;
-  margin-bottom: 23px;
-
-  @media (min-width: $tablet-width) {
-    width: 144px;
-    height: 260px;
-    margin-bottom: 30px;
-  }
+  margin-bottom: 30px;
 
   @media (min-width: $laptop-width) {
     width: 120px;
@@ -304,15 +386,9 @@
   flex-direction: column;
   order: 4;
 
-  width: 83px;
-  margin-bottom: 23px;
-  padding-top: 14px;
-
-  @media (min-width: $tablet-width) {
-    width: 94px;
-    margin-bottom: 30px;
-    padding-top: 26px;
-  }
+  width: 94px;
+  margin-bottom: 30px;
+  padding-top: 26px;
 
   @media (min-width: $laptop-width) {
     width: 94px;
@@ -328,11 +404,7 @@
 }
 
 .coffee-card__feature {
-  margin-bottom: 10px;
-
-  @media (min-width: $tablet-width) {
-    margin-bottom: 12px;
-  }
+  margin-bottom: 12px;
 
   @media (min-width: $desktop-width) {
     margin-bottom: 15px;
@@ -341,17 +413,10 @@
 
 .coffee-card__feature-name {
   display: inline-block;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 
-  font-size: 10px;
-  line-height: 12px;
-
-  @media (min-width: $tablet-width) {
-    margin-bottom: 6px;
-
-    font-size: 12px;
-    line-height: 14px;
-  }
+  font-size: 12px;
+  line-height: 14px;
 
   @media (min-width: $desktop-width) {
     margin-bottom: 10px;
@@ -364,11 +429,7 @@
 .coffee-card__link {
   align-self: center;
   order: 8;
-  width: 112px;
-
-  @media (min-width: $tablet-width) {
-    width: 149px;
-  }
+  width: 149px;
 
   @media (min-width: $laptop-width) {
     width: 125px;
@@ -387,34 +448,22 @@
   margin: 0;
 
   font-weight: 900;
-  font-size: 20px;
-  line-height: 26px;
+  font-size: 26px;
+  line-height: 32px;
 
   &::before {
     position: absolute;
-    top: -15px;
+    top: -22px;
 
     display: block;
 
     color: $c-c6;
     font-weight: 500;
-    font-size: 16px;
-    line-height: 20px;
+    font-size: 22px;
+    line-height: 26px;
     text-decoration: line-through;
 
     content: attr(data-old_price) " \20bd";
-  }
-
-  @media (min-width: $tablet-width) {
-    font-size: 26px;
-    line-height: 32px;
-
-    &::before {
-      top: -22px;
-
-      font-size: 22px;
-      line-height: 26px;
-    }
   }
 
   @media (min-width: $laptop-width) {
@@ -443,11 +492,7 @@
 }
 
 .coffee-card__rewiews {
-  margin-bottom: 18px;
-
-  @media (min-width: $tablet-width) {
-    margin-bottom: 20px;
-  }
+  margin-bottom: 20px;
 
   @media (min-width: $desktop-width) {
     margin-bottom: 30px;
@@ -455,22 +500,12 @@
 }
 
 .coffee-card__rewiews-text {
-  font-size: 8px;
-  line-height: 10px;
+  font-size: 10px;
+  line-height: 12px;
 
   & b {
-    font-size: 12px;
-    line-height: 14px;
-  }
-
-  @media (min-width: $tablet-width) {
-    font-size: 10px;
-    line-height: 12px;
-
-    & b {
-      font-size: 14px;
-      line-height: 16px;
-    }
+    font-size: 14px;
+    line-height: 16px;
   }
 
   @media (min-width: $desktop-width) {
@@ -485,25 +520,15 @@
 }
 
 .coffee-card__rating-stars {
-  $mobile-height: 16px;
   $tablet-height: 18px;
   $desktop-height: 25px;
 
-  height: $mobile-height;
+  height: $tablet-height;
   margin-bottom: 5px;
 
   &::before,
   & span::before {
-    background-size: auto $mobile-height;
-  }
-
-  @media (min-width: $tablet-width) {
-    height: $tablet-height;
-
-    &::before,
-    & span::before {
-      background-size: auto $tablet-height;
-    }
+    background-size: auto $tablet-height;
   }
 
   @media (min-width: $desktop-width) {
@@ -517,28 +542,16 @@
 }
 
 .coffee-card__strength {
-  $mobile-height: 12px;
   $tablet-height: 13px;
   $desktop-height: 19px;
 
   width: 100%;
-  height: $mobile-height;
-  margin-bottom: 18px;
+  height: $tablet-height;
+  margin-bottom: 25px;
 
   &::before,
   & span::before {
-    background-size: auto $mobile-height;
-  }
-
-  @media (min-width: $tablet-width) {
-    height: $tablet-height;
-
-    margin-bottom: 25px;
-
-    &::before,
-    & span::before {
-      background-size: auto $tablet-height;
-    }
+    background-size: auto $tablet-height;
   }
 
   @media (min-width: $desktop-width) {
@@ -559,20 +572,11 @@
   $desktop-height: 10px;
 
   width: 100%;
-  height: $mobile-height;
+  height: $tablet-height;
 
   &::before,
   & span::before {
-    background-size: auto $mobile-height;
-  }
-
-  @media (min-width: $tablet-width) {
-    height: $tablet-height;
-
-    &::before,
-    & span::before {
-      background-size: auto $tablet-height;
-    }
+    background-size: auto $tablet-height;
   }
 
   @media (min-width: $desktop-width) {
