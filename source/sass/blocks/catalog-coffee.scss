@@ -1,0 +1,90 @@
+.catalog-coffee__list {
+  @include list-reset;
+
+  width: 100%;
+  margin-bottom: 30px;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    justify-content: space-between;
+    row-gap: 20px;
+  }
+
+  @media (min-width: $laptop-width) {
+    grid-template-columns: repeat(4, max-content);
+    row-gap: 50px;
+
+    margin-bottom: 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    row-gap: 70px;
+
+    margin-bottom: 70px;
+  }
+}
+
+.catalog-coffee__list-item {
+  margin-bottom: 20px;
+
+  @media (max-width: $tablet-width) {
+    &:nth-child(n + 4) {
+      display: none;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+  }
+
+  @media (max-width: $laptop-width) {
+    &:nth-child(n + 5) {
+      display: none;
+    }
+  }
+}
+
+.catalog-coffee__button-more {
+  width: 100%;
+  padding: 15px;
+
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+
+  background: $white;
+  border: 1px solid $c-e4;
+  border-radius: 5px;
+
+  cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    padding: 22px;
+
+    font-size: 22px;
+    line-height: 26px;
+  }
+
+  @media (min-width: $laptop-width) {
+    padding: 16px;
+
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 23px;
+
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  &:active {
+    box-shadow: 0px 0px 18px rgba($c-92, 35%);
+  }
+
+  &:hover {
+    background-color: $corn-silk;
+  }
+}

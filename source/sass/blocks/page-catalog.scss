@@ -31,6 +31,7 @@
 .page-catalog__wrapper {
   display: flex;
   flex-direction: column;
+  margin-bottom: 30px;
   padding-top: 30px;
 
   background-image: url(/img/cup-coffee-397x281.png);
@@ -39,6 +40,8 @@
   background-size: 340px auto;
 
   @media (min-width: $tablet-width) {
+    margin-bottom: 70px;
+
     background-image: url(/img/cup-coffee-644x456.png);
     background-position: 50% 266px;
     background-size: auto;
@@ -46,6 +49,10 @@
 
   @media (min-width: $laptop-width) {
     background-position: 100% 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 100px;
   }
 }
 
@@ -113,5 +120,233 @@
 
   @media (min-width: $desktop-width) {
     margin-bottom: 80px;
+  }
+}
+
+.page-catalog__catalog-coffee {
+  position: relative;
+}
+
+.page-catalog__sorting {
+  position: absolute;
+  top: 0;
+  left:0;
+  z-index: 10;
+
+  display: none;
+
+  @media (min-width: $laptop-width) {
+    width: 290px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 320px;
+  }
+
+  &--opened {
+    display: block;
+  }
+}
+
+.page-catalog__sorting-caption {
+  display: inline-block;
+  margin-bottom: 30px;
+  padding-left: 20px;
+
+  font-size: 18px;
+  line-height: 22px;
+  text-decoration: underline;
+
+  cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 40px;
+
+    font-size: 20px;
+    line-height: 26px;
+  }
+
+  @media (min-width: $laptop-width) {
+    margin-bottom: 48px;
+
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 58px;
+
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  &:hover {
+    color: $yellow;
+  }
+}
+
+.page-catalog__options {
+  @include list-reset;
+
+  background-color: $white;
+}
+
+.page-catalog__option {
+  display: inline-block;
+  width: 100%;
+  min-height: 40px;
+  padding-right: 38px;
+  padding-left: 38px;
+
+  font-size: 16px;
+  line-height: 40px;
+  vertical-align: middle;
+
+  &--active {
+    min-height: 45px;
+
+    color: $yellow;
+    line-height: 45px;
+
+    border-bottom: 1px solid $c-e9;
+  }
+
+  @media (min-width: $tablet-width) {
+    min-height: 46px;
+    padding-right: 55px;
+    padding-left: 55px;
+
+    font-size: 20px;
+    line-height: 55px;
+
+    &--active {
+      min-height: 56px;
+
+      line-height: 56px;
+    }
+  }
+
+  @media (min-width: $laptop-width) {
+    min-height: 30px;
+    padding-right: 35px;
+    padding-left: 35px;
+
+    font-size: 14px;
+    line-height: 30px;
+
+    &--active {
+      min-height: 40px;
+
+      line-height: 40px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    min-height: 40px;
+    padding-right: 40px;
+    padding-left: 40px;
+
+    font-size: 20px;
+    line-height: 40px;
+
+    &--active {
+      min-height: 60px;
+
+      line-height: 60px;
+    }
+  }
+
+  &:hover {
+    background-color: $c-fc;
+  }
+}
+
+.page-catalog__sorting-button-close {
+  position: absolute;
+  top: 14px;
+  right: 12px;
+
+  display: block;
+  width: 18px;
+  height: 18px;
+  padding: 0;
+
+  font-size: 0;
+  line-height: 0;
+
+  background-color: transparent;
+
+  border: none;
+
+  cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    right: 18px;
+
+    width: 26px;
+    height: 26px;
+  }
+
+  @media (min-width: $laptop-width) {
+    top: 10px;
+    right: 10px;
+
+    width: 18px;
+    height: 18px;
+  }
+
+  @media (min-width: $desktop-width) {
+    top: 18px;
+
+    width: 22px;
+    height: 22px;
+  }
+
+  &::before,
+  &::after {
+    position: absolute;
+    top: 50%;
+    left: 0;
+
+    display: block;
+    width: 100%;
+    height: 1px;
+
+    background-color: $black;
+
+    content: "";
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+
+.page-catalog__subscription {
+  background-color: $white;
+  background-image: url(/img/bg/bg-top-grey-yellow.svg);
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-size: 100%;
+
+  @media (min-width: $laptop-width) {
+    padding-bottom: 60px;
+
+    background-image: url(/img/cup-coffee-644x456.png),
+      url(/img/bg/bg-top-grey-yellow.svg);
+    background-repeat: no-repeat;
+    background-position: calc(50% + 440px) 0, 50% 0;
+    background-size: auto, 100%;
+  }
+
+  @media (min-width: $desktop-width) {
+    background-image: url(/img/cup-coffee-916x773.png),
+      url(/img/bg/bg-top-grey-yellow.svg);
+    background-position: calc(50% + 630px) -45px, 50% 0;
+    background-size: 802px, 100%;
   }
 }

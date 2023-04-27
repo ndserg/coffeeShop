@@ -1,27 +1,3 @@
-.subscription {
-  background-image: url(/img/bg/yellow-top-bg.svg);
-  background-repeat: no-repeat;
-  background-position: 50% 0;
-  background-size: 100%;
-
-  @media (min-width: $laptop-width) {
-    padding-bottom: 60px;
-
-    background-image: url(/img/cup-coffee-644x456.png),
-      url(/img/bg/yellow-top-bg.svg);
-    background-repeat: no-repeat;
-    background-position: calc(50% + 440px) 0, 50% 0;
-    background-size: auto, 100%;
-  }
-
-  @media (min-width: $desktop-width) {
-    background-image: url(/img/cup-coffee-916x773.png),
-      url(/img/bg/yellow-top-bg.svg);
-    background-position: calc(50% + 630px) -45px, 50% 0;
-    background-size: 802px, 100%;
-  }
-}
-
 .subscription__wrapper {
   padding-top: 320px;
 

@@ -1,4 +1,8 @@
 .footer-main {
+  background-color: $white;
+}
+
+.footer-main__wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
