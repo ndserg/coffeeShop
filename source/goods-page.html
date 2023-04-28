@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Интернет магазин Кофе Milor</title>
+  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="favicon-16x16.png" type="image/png">
+  <link rel="icon" href="favicon-32x32.png" type="image/png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" type="image/png">
+  <link rel="manifest" href="manifest.webmanifest">
+</head>
+
+<body class="page-goods">
+  <header class="header-main">
+    <div class="container header-main__wrapper">
+      <button class="header-main__menu-button burger-button"></button>
+
+      <a class="header-main__logo logo" href="index.html">
+        <img class="logo__img" src="img/logo.svg" width="179" height="80" alt="Логотип магазина кофе Milor">
+      </a>
+
+      <nav class="header-main__nav sait-nav">
+        <ul class="header-main__nav-list sait-nav__list">
+          <li class="header-main__nav-item sait-nav__item">
+            <a class="header-main__nav-link sait-nav__link sait-nav__link--current" href="catalog-coffee.html">Каталог товаров</a>
+          </li>
+
+          <li class="header-main__nav-item sait-nav__item">
+            <a class="header-main__nav-link sait-nav__link" href="#">Блог</a>
+          </li>
+
+          <li class="header-main__nav-item asit-nav__item">
+            <a class="header-main__nav-link sait-nav__link" href="#">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+
+      <ul class="header-main__user-menu user-menu">
+        <li class="user-menu__item user-menu__search">
+          <label class="user-menu__search-label" for="search" tabindex="0" aria-label="Поиск">
+            <svg class="user-menu__icon" width="17" height="17">
+              <use xlink:href="icons/sprite.svg#icon-search"></use>
+            </svg>
+          </label>
+
+          <div class="user-menu__search-box search-box">
+            <div class="search-box_wrapper">
+              <button class="search-box__button-close" type="button">Отменить</button>
+
+              <input class="search-box__input" type="text" name="search" id="search" placeholder="Поиск по товарам">
+
+              <svg class="search-box__icon" width="32" height="31">
+                <use xlink:href="icons/sprite.svg#icon-search"></use>
+              </svg>
+
+              <ul class="search-box__list">
+                <li class="search-box__item search-box__item--not-found">
+                  Ничего не найдено
+                </li>
+
+                <li class="search-box__item">
+                  <a class="search-box__link" href="#">Ячменный напиток Millor - Здоровое питание</a>
+                </li>
+
+                <li class="search-box__item">
+                  <a class="search-box__link" href="#">Ячменный напиток Millor - Здоровое питание</a>
+                </li>
+
+                <li class="search-box__item">
+                  <a class="search-box__link" href="#">Ячменный напиток Millor - Здоровое питание</a>
+                </li>
+
+                <li class="search-box__item">
+                  <a class="search-box__link" href="#">Ячменный напиток Millor - Здоровое питание</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </li>
+
+        <li class="user-menu__item">
+          <a class="user-menu__link" href="#" aria-label="Корзина">
+            <span class="user-menu__cart-goods">1</span>
+            <svg class="user-menu__icon" width="19" height="17">
+              <use xlink:href="icons/sprite.svg#icon-cart-empty"></use>
+            </svg>
+          </a>
+        </li>
+
+        <li class="user-menu__item">
+          <a class="user-menu__link" href="#" aria-label="Логин">
+            <svg class="user-menu__icon user-menu__icon--login" width="17" height="20">
+              <use xlink:href="icons/sprite.svg#icon-login"></use>
+            </svg>
+            <img class="user-menu__user-photo" src="/img/user-photo.jpg" width="40" height="40" alt="Имя пользователя">
+          </a>
+        </li>
+      </ul>
+
+      <div class="header-main__contacts header-contacts">
+        <a class="header-contacts__text-link" href="mailto:Import@kldrefine.com">Import@kldrefine.com</a>
+
+        <a class="header-contacts__icon-link" href="tel:+79123456142">
+          <span>Телефон</span>
+          <svg class="header-contacts__icon" width="50" height="50">
+            <use xlink:href="icons/sprite.svg#icon-phone"></use>
+          </svg>
+        </a>
+
+        <a class="header-contacts__icon-link" href="#">
+          <span>Instagram</span>
+          <svg class="header-contacts__icon" width="50" height="50">
+            <use xlink:href="icons/sprite.svg#icon-instagram"></use>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="page-goods__main">
+    <h1 class="visually-hidden">Страница товара - Кофе Colombia Supremo</h1>
+      <div class="container">
+        <nav class="page-goods__breadcrumbs breadcrumbs">
+          <ul class="breadcrumbs__list">
+            <li class="breadcrumbs__item">
+              <a href="#" class="breadcrumbs__link">Главная</a>
+            </li>
+
+            <li class="breadcrumbs__item">
+              <a href="#" class="breadcrumbs__link">Каталог товаров</a>
+            </li>
+
+            <li class="breadcrumbs__item">
+              <a href="#" class="breadcrumbs__link">Свежеобжаренный кофе</a>
+            </li>
+
+            <li class="breadcrumbs__item">
+              <a href="#" class="breadcrumbs__link breadcrumbs__link--current">Карточка товара название</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <section class="page-goods__product-info">
+        <h2 class="visually-hidden">Описание и характеристики товара - кофе Colombia Supremo</h2>
+        <div class="container">
+          <article class="page-goods_product-coffee product-coffee">
+            <h3 class="product-coffee__title">Colombia Supremo</h3>
+            <p class="product-coffee__short-info">Мытая, натуральная, смесь</p>
+
+            <div class="product-coffee__description">
+              <p class="product-coffee__description-text">Компания Нью Рефайнинг Груп находится в г. Калининграде и имеет свой склад и представительство в Москве. Завод работает на рынке свежеобжаренного кофе и растворимой продукции более 15 лет. Завод имеет немецкое оборудование марки Probat по обжарке кофе и итальянские агломераторы для производства растворимой продукции.</p>
+              <button class="product-coffee__button-show-more" type="button">Читать полностью</button>
+            </div>
+
+            <p class="product-coffee__promo">Популярное <br>Новый урожай</p>
+
+            <form class="product-coffee__order-form" action="#" method="post">
+              <select class="product-coffee__weight" name="weight" id="weight">
+                <option value="100">100 г.</option>
+                <option value="250">250 г.</option>
+                <option value="300">300 г.</option>
+                <option value="500">500 г.</option>
+              </select>
+
+              <label class="product-coffee__quantity-label" for="quantity" aria-label="Введите количество">
+                <input class="product-coffee__quantity" type="number" name="quantity" id="quantity" placeholder="1">
+              </label>
+
+              <button class="product-coffee__button-cart button button--small" type="submit">Купить за
+                <span class="product-coffee__price">250 ₽</span>
+              </button>
+            </form>
+
+            <figure class="product-coffee__img-box">
+              <picture>
+                <source media="(min-width: 1660px)" srcset="/img/sales/coffee-packet-desktop.jpg">
+                <source media="(min-width: 1180px)" srcset="/img/sales/coffee-packet-laptop.jpg">
+                <source media="(min-width: 700px)" srcset="/img/sales/coffee-packet-tablet.jpg">
+                <img class="product-coffee__img" src="/img/sales/coffee-packet-mobile.jpg" width="136" height="260" alt="Чашка каши с джемом">
+              </picture>
+            </figure>
+
+            <div class="product-coffee__rewiews">
+              <div class="product-coffee__rating-stars rating__stars">
+                <span style="width: 70%;"></span>
+              </div>
+              <span class="product-coffee__rewiews-text"><b>4.0</b> (32 отзыва)</span>
+            </div>
+
+            <div class="product-coffee__strength rating__strength">
+              <span style="width: 56%;"></span>
+            </div>
+
+            <ul class="product-coffee__features">
+              <li class="product-coffee__feature">
+                <span class="product-coffee__feature-name">Кислинка</span>
+                <div class="product-coffee__rating-feature rating__feature">
+                  <span style="width: 70%;"></span>
+                </div>
+              </li>
+
+              <li class="product-coffee__feature">
+                <span class="product-coffee__feature-name">Горчинка</span>
+                <div class="product-coffee__rating-feature rating__feature">
+                  <span style="width: 50%;"></span>
+                </div>
+              </li>
+
+              <li class="product-coffee__feature">
+                <span class="product-coffee__feature-name">Насыщенность</span>
+                <div class="product-coffee__rating-feature rating__feature">
+                  <span style="width: 60%;"></span>
+                </div>
+              </li>
+            </ul>
+          </article>
+
+
+          <nav class="page-goods__nav product-nav">
+            <ul class="product-nav__list">
+              <li class="product-nav__item">
+                <a class="product-nav__link product-nav__link--active" href="#">Описание</a>
+              </li>
+
+              <li class="product-nav__item">
+                <a class="product-nav__link" href="#">Как готовить?</a>
+              </li>
+
+              <li class="product-nav__item">
+                <a class="product-nav__link" href="#">Дополнительно</a>
+              </li>
+
+              <li class="product-nav__item">
+                <a class="product-nav__link" href="#">Отзывы</a>
+              </li>
+            </ul>
+          </nav>
+
+          <section class="page-goods__pruduct-spec product-spec">
+            <h2 class="visually-hidden">Характеристики товара</h2>
+
+            <dl class="product-spec__list">
+              <dt class="product-spec__title product-spec__list-title">Вкус</dt>
+
+              <dd class="product-spec__item">
+                <figure class="product-spec__img">
+                  <svg width="16" height="18">
+                    <use xlink:href="icons/sprite.svg#icon-mokka"></use>
+                  </svg>
+                </figure>
+                <span class="product-spec__name">Шоколад</span>
+              </dd>
+
+              <dd class="product-spec__item">
+                <figure class="product-spec__img">
+                  <svg width="16" height="18">
+                    <use xlink:href="icons/sprite.svg#icon-mokka"></use>
+                  </svg>
+                </figure>
+                <span class="product-spec__name">Яблоко</span>
+              </dd>
+
+              <dd class="product-spec__item">
+                <figure class="product-spec__img">
+                  <svg width="16" height="18">
+                    <use xlink:href="icons/sprite.svg#icon-mokka"></use>
+                  </svg>
+                </figure>
+                <span class="product-spec__name">Какао</span>
+              </dd>
+            </dl>
+
+            <table class="product-spec__table">
+              <thead>
+                <tr>
+                    <th class="product-spec__title product-spec__table-title" colspan="2">Характеристики</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="product-spec__table-row">
+                  <td class="product-spec__col-name">Арабика:</td>
+                  <td class="product-spec__col-desc">Кот Бразилио, Перу гр.2,<br> Эфиопия Сидамогр.4<br> Премиум Амхара Айеху</td>
+                </tr>
+
+                <tr class="product-spec__table-row">
+                  <td class="product-spec__col-name">Робуста:</td>
+                  <td class="product-spec__col-desc">мытая Индия, сухой Вьетнам</td>
+                </tr>
+
+                <tr class="product-spec__table-row">
+                  <td class="product-spec__col-name">Способ обработки:</td>
+                  <td class="product-spec__col-desc">мытая, сухая</td>
+                </tr>
+
+                <tr class="product-spec__table-row">
+                  <td class="product-spec__col-name">Вид кофе:</td>
+                  <td class="product-spec__col-desc">cмесь арабика/робуста</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+
+          <article class="page-goods__pruduct-info pruduct-info">
+            <h2 class="visually-hidden">Подробное описание товара</h2>
+
+            <div class="pruduct-info__description">
+              <p class="pruduct-info__text">
+                Разнообразный и богатый опыт новая модель организационной деятельности позволяет оценить значение позиций, занимаемых участниками в отношении поставленных задач. Значимость этих проблем настолько очевидна, что дальнейшее развитие различных форм деятельности в значительной степени обуславливает создание модели развития.
+              </p>
+
+              <p class="pruduct-info__text">
+                Задача организации, в особенности же рамки и место обучения кадров способствует подготовки и реализации систем массового участия. Таким образом укрепление и развитие структуры способствует подготовки и реализации направлений прогрессивного развития.
+              </p>
+
+              <p class="pruduct-info__text">
+                Товарищи! реализация намеченных плановых заданий обеспечивает широкому кругу (специалистов) участие в формировании соответствующий условий активизации. С другой стороны реализация намеченных плановых заданий требуют от нас анализа существенных финансовых и административных условий.
+              </p>
+            </div>
+
+            <figure class="pruduct-info__img">
+              <picture>
+                <source media="(min-width: 1660px)" srcset="/img/products/coffee-beans-desktop.jpg">
+                <source media="(min-width: 1180px)" srcset="/img/products/coffee-beans-laptop.jpg">
+                <source media="(min-width: 700px)" srcset="/img/products/coffee-beans-tablet.jpg">
+                <img class="coffee-card__img" src="/img/products/coffee-beans-mobile.jpg" width="340" height="170" alt="Кофе зерновое росспью">
+              </picture>
+
+              <button class="pruduct-info__button-zoom" type="button">Увеличить
+                <svg class="pruduct-info__icon-zoom" width="26" height="26">
+                  <use xlink:href="icons/sprite.svg#icon-zoom"></use>
+                </svg>
+              </button>
+            </figure>
+          </article>
+        </div>
+      </section>
+
+      <section class="page-goods__blog-links">
+        <div class="container">
+          <h2 class="page-goods__title page-goods__title--blog">Как готовить?</h2>
+
+          <ul class="blog-links">
+            <li class="blog-links__item">
+              <a class="blog-links__link" href="#">
+                <span class="blog-links__title">Турка</span>
+                <figure class="blog-links__icon">
+                  <svg width="68" height="68">
+                    <use xlink:href="icons/sprite.svg#icon-turka"></use>
+                  </svg>
+                </figure>
+              </a>
+            </li>
+
+            <li class="blog-links__item">
+              <a class="blog-links__link" href="#">
+                <span class="blog-links__title">Френч-пресс</span>
+                <figure class="blog-links__icon">
+                  <svg width="49" height="58">
+                    <use xlink:href="icons/sprite.svg#icon-french-press"></use>
+                  </svg>
+                </figure>
+              </a>
+            </li>
+
+            <li class="blog-links__item">
+              <a class="blog-links__link" href="#">
+                <span class="blog-links__title">Мока</span>
+                <figure class="blog-links__icon">
+                  <svg width="51" height="61">
+                    <use xlink:href="icons/sprite.svg#icon-mokka"></use>
+                  </svg>
+                </figure>
+              </a>
+            </li>
+
+            <li class="blog-links__item">
+              <a class="blog-links__link" href="#">
+                <span class="blog-links__title">Эспрессо</span>
+                <figure class="blog-links__icon">
+                  <svg width="54" height="56">
+                    <use xlink:href="icons/sprite.svg#icon-espresso"></use>
+                  </svg>
+                </figure>
+              </a>
+            </li>
+
+            <li class="blog-links__item">
+              <a class="blog-links__link" href="#">
+                <span class="blog-links__title">Воронка</span>
+                <figure class="blog-links__icon">
+                  <svg width="55" height="55">
+                    <use xlink:href="icons/sprite.svg#icon-funnel"></use>
+                  </svg>
+                </figure>
+              </a>
+            </li>
+
+            <li class="blog-links__item">
+              <a class="blog-links__link" href="#">
+                <span class="blog-links__title">Аэропресс</span>
+                <figure class="blog-links__icon">
+                  <svg width="29" height="60">
+                    <use xlink:href="icons/sprite.svg#icon-aeroexpress"></use>
+                  </svg>
+                </figure>
+              </a>
+            </li>
+
+            <li class="blog-links__item">
+              <a class="blog-links__link" href="#">
+                <span class="blog-links__title">Чашка</span>
+                <figure class="blog-links__icon">
+                  <svg width="54" height="56">
+                    <use xlink:href="icons/sprite.svg#icon-cup"></use>
+                  </svg>
+                </figure>
+              </a>
+            </li>
+
+            <li class="blog-links__item">
+              <a class="blog-links__link" href="#">
+                <span class="blog-links__title">Автомат</span>
+                <figure class="blog-links__icon">
+                  <svg width="42" height="58">
+                    <use xlink:href="icons/sprite.svg#icon-coffee-automat"></use>
+                  </svg>
+                </figure>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+    <section class="page-goods__subscription subscription">
+      <div class="subscription__wrapper container">
+        <h2 class="subscription__title">Подписка на новости и рассылку</h2>
+
+        <p class="subscription__info">Подпишитесь на нашу рассылку прямо сейчас и будьте в курсе новых поставок, скидок и эксклюзивных предложений.</p>
+
+        <form class="subscription__form" action="#" method="post">
+          <input class="subscription__email" type="email" placeholder="Ваш email" required>
+          <button class="subscription__button button button--medium" type="submit">Подписаться</button>
+        </form>
+
+        <p class="subscription__agreement">Нажимая на кнопку “Подписаться”, вы принимаете правила
+          <a href="#" class="subscription__agreement-link">пользовательского соглашения</a>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-main">
+    <div class="footer-main__wrapper container">
+      <a class="footer-main__logo logo" href="index.html">
+        <img class="logo__img" src="img/logo.svg" width="179" height="80" alt="Логотип магазина кофе Milor">
+      </a>
+
+      <nav class="footer-main__nav sait-nav">
+        <ul class="sait-nav__list">
+          <li class="sait-nav__item">
+            <a class="sait-nav__link sait-nav__link--current" href="catalog-coffee.html">Каталог товаров</a>
+          </li>
+
+          <li class="sait-nav__item">
+            <a class="sait-nav__link" href="#">Блог</a>
+          </li>
+
+          <li class="sait-nav__item">
+            <a class="sait-nav__link" href="#">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="/js/menu-toggle.js"></script>
+  <script src="/js/search-box.js"></script>
+</body>
+</html>
