@@ -22,41 +22,6 @@
   }
 }
 
-.pruduct-info__text {
-  margin: 0;
-  margin-bottom: 18px;
-
-  color: $c-22;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 18px;
-
-  @media (min-width: $tablet-width) {
-    margin-bottom: 26px;
-
-    font-size: 20px;
-    line-height: 26px;
-  }
-
-  @media (min-width: $laptop-width) {
-    margin-bottom: 24px;
-
-    font-size: 18px;
-    line-height: 24px;
-  }
-
-  @media (min-width: $desktop-width) {
-    margin-bottom: 32px;
-
-    font-size: 24px;
-    line-height: 32px;
-  }
-
-  &:last-child {
-    margin-bottom: 0;
-  }
-}
-
 .pruduct-info__img {
   position: relative;
 
