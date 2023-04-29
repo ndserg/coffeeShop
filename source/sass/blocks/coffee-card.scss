@@ -106,7 +106,7 @@
         line-height: 12px;
       }
 
-      .coffee-card__link {
+      .coffee-card__button-cart {
         width: 112px;
       }
 
@@ -265,6 +265,16 @@
   @media (min-width: $desktop-width) {
     font-size: 24px;
     line-height: 30px;
+  }
+
+  a {
+    color: inherit;
+    font: inherit;
+    text-decoration: none;
+  }
+
+  &:hover {
+    color: $yellow;
   }
 }
 
@@ -426,7 +436,7 @@
   }
 }
 
-.coffee-card__link {
+.coffee-card__button-cart {
   align-self: center;
   order: 8;
   width: 149px;
