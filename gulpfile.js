@@ -31,7 +31,8 @@ exports.clean = clean;
 const copy = () => {
   return src([
     "source/fonts/**/*.{woff2,woff}",
-    "source/php/**/*",
+    "source/icons/**/*",
+    "source/*.{png,ico,webmanifest}",
     ], {
     base: "source"
     })
@@ -57,7 +58,7 @@ exports.images = images;
 // Wepp
 
 const createWebp = () => {
-  return src("source/img/*.jpg")
+  return src("source/img/**/*.jpg")
   .pipe(webp({quality: 80}))
   .pipe(dest("build/img/"))
 }
@@ -91,7 +92,7 @@ const styles = () => {
     ]))
     .pipe(rename("style.min.css"))
     .pipe(mode.development(sourcemap.write("sourcemaps")))
-    .pipe(dest("source/css"))
+    .pipe(dest("build/css"))
     .pipe(sync.stream());
 }
 
@@ -117,7 +118,7 @@ exports.scripts = scripts;
 // HTML
 
 const html = () => {
-  return src("source/index.html")
+  return src("source/*.html")
   .pipe(inject(src(["build/js/*.js", "build/css/*.css"], {read: false}) , {ignorePath: "build", addRootSlash: false}))
   .pipe(mode.production(htmlmin({collapseWhitespace: true})))
   .pipe(dest("build"))
@@ -131,7 +132,7 @@ exports.html = html;
 const server = (done) => {
   sync.init({
     server: {
-      baseDir: "source"
+      baseDir: "build"
     },
     cors: true,
     notify: false,
@@ -153,9 +154,8 @@ const reload = (done) => {
 
 const watcher = () => {
   gulp.watch("source/sass/**/*.scss", series(styles));
-  gulp.watch("source/*.html", reload);
-  //gulp.watch("source/*.html", series(html));
-  //gulp.watch("source/js/*.js", series(scripts, reload));
+  gulp.watch("source/*.html", series(html));
+  gulp.watch("source/js/*.js", series(scripts, reload));
 }
 
 exports.build = series(
@@ -164,12 +164,10 @@ exports.build = series(
   html
 );
 
-exports.prod = series(
+exports.default = series(
   clean,
   parallel(copy, styles, scripts, images, createWebp, icons),
   html,
   server,
   watcher
 );
-
-exports.default = series(styles, server, watcher);

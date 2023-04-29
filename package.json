@@ -1,5 +1,5 @@
 {
-  "name": "Coffee Shop",
+  "name": "coffe-shop",
   "version": "1.0.0",
   "description": "Coffee Shop site",
   "repository": {
@@ -12,8 +12,8 @@
     "stylelint": "stylelint \"source/sass/**/*.scss\"",
     "test": "npm run editorconfig && npm run stylelint",
     "build": "gulp build --production",
-    "prod": "gulp prod --production",
-    "start": "gulp --development"
+    "prod": "gulp --production",
+    "dev": "gulp --development"
   },
   "browserslist": [
     "last 2 versions",
