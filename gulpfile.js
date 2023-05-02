@@ -48,7 +48,11 @@ const images = () => {
   .pipe(imagemin([
     imagemin.mozjpeg({quality: 75, progressive: true}),
     imagemin.optipng({optimizationLevel: 3}),
-    imagemin.svgo()
+    imagemin.svgo({
+      plugins: [{
+        removeViewBox: false,
+      }],
+    }),
   ]))
   .pipe(dest("build/img"))
 }
@@ -70,7 +74,11 @@ exports.createWebp = createWebp;
 const icons = () => {
   return src("source/icons/*.svg")
   .pipe(mode.production(imagemin([
-    imagemin.svgo()
+    imagemin.svgo({
+      plugins: [{
+        removeViewBox: false,
+      }],
+    }),
   ])))
   .pipe(svgstore())
   .pipe(rename("sprite.svg"))
