@@ -16,7 +16,8 @@ const webp = require("gulp-webp");
 const htmlmin = require("gulp-htmlmin");
 const inject = require("gulp-inject");
 const rename = require("gulp-rename");
-const {dest, series, parallel, src} = require("gulp");
+const fileInclude = require("gulp-file-include");
+const { dest, series, parallel, src } = require("gulp");
 const sync = require("browser-sync").create();
 
 // clean
@@ -33,9 +34,9 @@ const copy = () => {
     "source/fonts/**/*.{woff2,woff}",
     "source/icons/**/*",
     "source/*.{png,ico,webmanifest}",
-    ], {
+  ], {
     base: "source"
-    })
+  })
     .pipe(dest("build"))
 }
 
@@ -45,16 +46,16 @@ exports.copy = copy;
 
 const images = () => {
   return src("source/img/**/*.{jpg,png,svg}")
-  .pipe(imagemin([
-    imagemin.mozjpeg({quality: 75, progressive: true}),
-    imagemin.optipng({optimizationLevel: 3}),
-    imagemin.svgo({
-      plugins: [{
-        removeViewBox: false,
-      }],
-    }),
-  ]))
-  .pipe(dest("build/img"))
+    .pipe(imagemin([
+      imagemin.mozjpeg({ quality: 75, progressive: true }),
+      imagemin.optipng({ optimizationLevel: 3 }),
+      imagemin.svgo({
+        plugins: [{
+          removeViewBox: false,
+        }],
+      }),
+    ]))
+    .pipe(dest("build/img"))
 }
 
 exports.images = images;
@@ -63,8 +64,8 @@ exports.images = images;
 
 const createWebp = () => {
   return src("source/img/**/*.jpg")
-  .pipe(webp({quality: 80}))
-  .pipe(dest("build/img/"))
+    .pipe(webp({ quality: 80 }))
+    .pipe(dest("build/img/"))
 }
 
 exports.createWebp = createWebp;
@@ -73,16 +74,16 @@ exports.createWebp = createWebp;
 
 const icons = () => {
   return src("source/icons/*.svg")
-  .pipe(mode.production(imagemin([
-    imagemin.svgo({
-      plugins: [{
-        removeViewBox: false,
-      }],
-    }),
-  ])))
-  .pipe(svgstore())
-  .pipe(rename("sprite.svg"))
-  .pipe(dest("build/icons/"))
+    .pipe(mode.production(imagemin([
+      imagemin.svgo({
+        plugins: [{
+          removeViewBox: false,
+        }],
+      }),
+    ])))
+    .pipe(svgstore())
+    .pipe(rename("sprite.svg"))
+    .pipe(dest("build/icons/"))
 }
 
 exports.icons = icons;
@@ -127,10 +128,11 @@ exports.scripts = scripts;
 
 const html = () => {
   return src("source/*.html")
-  .pipe(inject(src(["build/js/*.js", "build/css/*.css"], {read: false}) , {ignorePath: "build", addRootSlash: false}))
-  .pipe(mode.production(htmlmin({collapseWhitespace: true})))
-  .pipe(dest("build"))
-  .pipe(sync.stream());
+    .pipe(fileInclude())
+    .pipe(inject(src(["build/js/*.js", "build/css/*.css"], { read: false }), { ignorePath: "build", addRootSlash: false }))
+    .pipe(mode.production(htmlmin({ collapseWhitespace: true })))
+    .pipe(dest("build"))
+    .pipe(sync.stream());
 }
 
 exports.html = html;

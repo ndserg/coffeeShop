@@ -13,7 +13,7 @@
     "test": "npm run editorconfig && npm run stylelint",
     "build": "gulp build --production",
     "prod": "gulp --production",
-    "dev": "gulp --development"
+    "start": "gulp --development"
   },
   "browserslist": [
     "last 2 versions",
