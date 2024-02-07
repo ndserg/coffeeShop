@@ -4,6 +4,8 @@
   min-height: 395px;
   padding-bottom: 13px;
 
+  overflow-x: clip;
+
   background-image: url(/img/bg/ellipse-bg.svg),
     linear-gradient(to bottom, $corn-silk 190px, $yellow 190px, $yellow);
   background-repeat: no-repeat;

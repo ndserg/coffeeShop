@@ -110,15 +110,15 @@ h3 {
   margin: 0 auto;
 
   @media (min-width: $tablet-width) {
-    width: $tablet-width;
+    width: calc($tablet-width - 68px);
   }
 
   @media (min-width: $laptop-width) {
-    width: $laptop-width;
+    width: calc($laptop-width - 40px);
   }
 
   @media (min-width: $desktop-width) {
-    width: $desktop-width;
+    width: calc($desktop-width - 40px);
   }
 }
 

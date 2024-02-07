@@ -27,6 +27,7 @@
   display: flex;
   flex-direction: column;
   min-height: 520px;
+  padding-top: 40px;
 
   @media (min-width: $tablet-width) {
     min-height: 800px;
@@ -175,7 +176,7 @@
 
   @media (min-width: $laptop-width) {
     position: absolute;
-    top: -15px;
+    top: 0;
     right: 0;
     z-index: 2;
 
@@ -185,8 +186,6 @@
   }
 
   @media (min-width: $desktop-width) {
-    top: -30px;
-
     width: 270px;
   }
 }
